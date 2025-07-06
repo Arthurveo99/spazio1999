@@ -17,6 +17,11 @@
       background-position: center;
       background-repeat: no-repeat;
       color: white;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
     }
 
     header, section, footer, main {
@@ -334,12 +339,45 @@
   <footer style="font-size:1.5rem;">
     <mark>Troverete tutte le ultime novità nel mondo dell'Astronomia nella nostra <a href="astronews.html">PAGINA</a>.</mark>
   </footer>
+     <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
       menu.classList.toggle('active');
     }
+  
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+  </script>
+
   </script>
 </body>
 </html>
