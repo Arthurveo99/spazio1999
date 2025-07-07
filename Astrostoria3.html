@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999 - Astronomia in epoca moderna</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('milkyway.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      margin: 30px auto;
+      padding: 15px 20px;
+      border-radius: 10px;
+      max-width: 700px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 20px;
+      text-align: justify;
+    }
+
+    mark {
+      background-color: darkslateblue;
+      color: white;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: gold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+        max-width: 90%;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="menu">
+    <li><a href="astroblog.html">Home Blog</a></li>
+    <li><a href="astrooss.html">A. Osservativa</a></li>
+    <li><a href="astrofisica.html">Astrofisica</a></li>
+    <li><a href="cosmologia.html">Cosmologia</a></li>
+    <li><a href="planetologia.html">A. Planetaria</a></li>
+    <li><a href="astrosolare.html">A. Solare</a></li>
+    <li><a href="astronews.html">News</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
+
+  <h1><b><i>Astronomia in epoca Moderna</i></b></h1>
+
+ <h2><b>Niccolò Copernico</b></h2>
+<img src="copernico.jpg" alt="Niccolò Copernico">
+<p><b>
+Niccolò Copernico (1473–1543) fu un canonico, matematico e astronomo polacco, considerato il padre della rivoluzione scientifica in ambito astronomico. 
+Vissuto in un’epoca dominata dal modello geocentrico di Claudio Tolomeo, secondo cui la Terra era immobile al centro dell’universo, Copernico 
+propose una visione radicalmente diversa: il Sole al centro e i pianeti, inclusa la Terra, che gli ruotano attorno.
+
+<br><br>
+La sua opera fondamentale, <i>De revolutionibus orbium coelestium</i>, fu pubblicata nel 1543, anno della sua morte. In essa Copernico descrive 
+un universo ordinato secondo un sistema eliocentrico, dove la Terra compie due movimenti principali: la rotazione attorno al proprio asse e la rivoluzione 
+attorno al Sole. La Luna continua a orbitare attorno alla Terra, ma il ruolo centrale della Terra viene drasticamente ridimensionato.
+
+<br><br>
+Il suo modello spiegava meglio i moti retrogradi dei pianeti e semplificava notevolmente i calcoli astronomici rispetto al complicato sistema 
+di epicicli tolemaico. Tuttavia, la teoria non ebbe subito ampia diffusione, anche a causa delle implicazioni religiose e filosofiche. 
+In particolare, l'idea che la Terra non fosse al centro dell'universo minava profondamente la visione antropocentrica promossa dalla Chiesa cattolica.
+
+<br><br>
+Copernico dedicò molti anni alla raccolta di osservazioni e calcoli, temendo le reazioni che la sua teoria avrebbe suscitato. 
+La pubblicazione avvenne solo grazie all’intervento dell’editore Andreas Osiander, che inserì una prefazione anonima, presentando 
+l’opera come un’ipotesi matematica anziché una descrizione fisica della realtà.
+
+<br><br>
+Nonostante ciò, l’opera gettò le basi per un cambiamento epocale: la cosiddetta <i>“rivoluzione copernicana”</i> modificò per sempre la visione dell’universo e diede inizio all’era dell’astronomia moderna.
+</b></p>
+
+
+  <hr>
+
+ <h2><b>Giovanni Keplero</b></h2>
+<img src="keplero.jpg" alt="Giovanni Keplero">
+<p><b>
+Giovanni Keplero (1571–1630) fu un matematico e astronomo tedesco, figura centrale della rivoluzione scientifica.
+Profondo sostenitore del modello eliocentrico di Copernico, lo sviluppò ulteriormente introducendo per la prima volta
+un modello matematico accurato per descrivere il moto dei pianeti, superando definitivamente l’idea delle orbite circolari.
+
+<br><br>
+Keplero lavorò come assistente dell’astronomo danese <i>Tycho Brahe</i>, che aveva raccolto per decenni dati precisissimi
+sulle posizioni dei pianeti. Alla morte di Brahe, Keplero ebbe accesso a queste osservazioni, in particolare quelle su Marte,
+che si rivelarono decisive per lo sviluppo delle sue tre leggi sul moto planetario.
+
+<br><br>
+🔹<i>Prima legge di Keplero</i>: ogni pianeta si muove lungo un’orbita ellittica, con il Sole situato in uno dei due fuochi.
+<br>
+🔹<i>Seconda legge</i> (legge delle aree): la linea immaginaria che unisce un pianeta al Sole copre aree uguali in tempi uguali.
+<br>
+🔹<i>Terza legge</i>: il quadrato del periodo orbitale di un pianeta è proporzionale al cubo della sua distanza media dal Sole
+<i>(T² ∝ R³)</i>.
+
+<br><br>
+Queste leggi rappresentarono una svolta nella comprensione della meccanica celeste. Abbandonarono le antiche concezioni filosofiche
+di perfezione delle orbite circolari, introducendo l'ellisse come forma naturale del moto planetario. Le leggi di Keplero 
+dimostrarono che il sistema copernicano poteva non solo descrivere ma **prevedere** i moti planetari con precisione scientifica.
+
+<br><br>
+Keplero fu anche un pensatore mistico e spirituale. Cercava nelle leggi dell’universo un ordine divino, convinto che la matematica
+fosse il linguaggio con cui Dio aveva costruito il cosmo. La sua opera più celebre, <i>Harmonices Mundi</i>, è un connubio tra
+scienza, musica e teologia.
+
+<br><br>
+Nonostante le difficoltà economiche, le guerre religiose del suo tempo e la perdita di famigliari per malattia, Keplero portò avanti
+le sue ricerche con instancabile dedizione. Le sue leggi costituirono la base su cui, pochi decenni dopo, <i>Isaac Newton</i> formulò la teoria della gravitazione universale.
+</b></p>
+
+
+  <hr>
+
+  <h2><b>Galileo Galilei</b></h2>
+<img src="galileo.jpg" alt="Galileo Galilei">
+<p><b>
+Galileo Galilei (1564–1642) è considerato il padre della scienza moderna. Matematico, fisico, filosofo e astronomo, fu il primo 
+a combinare l’osservazione sperimentale con il metodo scientifico per comprendere i fenomeni naturali.
+
+<br><br>
+Il suo contributo all’astronomia è immenso. Sebbene non abbia inventato il telescopio, lo migliorò sensibilmente e lo puntò verso il cielo,
+aprendo una nuova era nell’osservazione astronomica. Nel 1609 costruì uno strumento che ingrandiva fino a 30 volte,
+e iniziò a scrutare la Luna, i pianeti, le stelle.
+
+<br><br>
+Tra le sue scoperte più famose vi sono:
+<ul>
+  <li>Le <i>montagne e i crateri sulla Luna</i>, che dimostravano che i corpi celesti non erano perfetti e sferici, come voleva la filosofia aristotelica.</li>
+  <li>Le <i>quattro lune maggiori di Giove</i> (Io, Europa, Ganimede e Callisto), che ruotavano attorno al pianeta e non alla Terra, minando il dogma geocentrico.</li>
+  <li>Le <i>fasi di Venere</i>, spiegabili solo con il modello eliocentrico di Copernico.</li>
+  <li>Le <i>macchie solari</i>, imperfezioni dinamiche sulla superficie del Sole.</li>
+</ul>
+
+<br>
+Tutte queste osservazioni confermavano il modello eliocentrico e sfidavano direttamente la cosmologia tolemaica e la dottrina religiosa del tempo.
+
+<br><br>
+Nel 1610 pubblicò il <i>Siderius Nuncius</i> (Messaggero celeste), un’opera che lo rese celebre in tutta Europa. Tuttavia, la sua posizione
+a favore del copernicanesimo lo mise in rotta di collisione con la Chiesa cattolica. 
+
+<br><br>
+Nel 1632 pubblicò il <i>Dialogo sopra i due massimi sistemi del mondo</i>, dove difendeva apertamente il modello
+
+  <hr>
+
+  <h2><b>Isaac Newton</b></h2>
+<img src="newton.jpg" alt="Isaac Newton">
+<p><b>
+Isaac Newton (1643–1727) è una delle figure più straordinarie della storia della scienza. Matematico, fisico, astronomo e filosofo naturale,
+fu il primo a formulare un quadro teorico completo in grado di spiegare sia i fenomeni terrestri che quelli celesti attraverso leggi universali.
+
+<br><br>
+La sua opera più celebre, <i>Philosophiæ Naturalis Principia Mathematica</i>, pubblicata nel 1687, rappresenta una vera pietra miliare della scienza moderna.
+In questo trattato, Newton enunciò le <br><i>3 Leggi del Moto</i> e la <i>Legge della Gravitazione Universale</i>, unificando meccanica terrestre e astronomia 
+in un’unica struttura teorica coerente.
+
+<br><br>
+Le sue tre leggi del moto sono:
+
+<ul>
+  <li><b>1ª legge (inerzia):</b> un corpo permane nel suo stato di quiete o moto rettilineo uniforme finché una forza esterna non interviene.</li>
+  <li><b>2ª legge (F = ma):</b> la forza applicata a un corpo è uguale alla massa del corpo per la sua accelerazione.</li>
+  <li><b>3ª legge (azione e reazione):</b> a ogni azione corrisponde sempre una reazione uguale e contraria.</li>
+</ul>
+
+<br>
+La <i>Legge di Gravitazione Universale</i> stabilisce che ogni corpo nell’universo attrae ogni altro corpo con una forza direttamente proporzionale
+al prodotto delle loro masse e inversamente proporzionale al quadrato della distanza che li separa. Questa legge permise per la prima volta
+di spiegare con precisione:
+
+<ul>
+  <li>il moto dei pianeti (giustificando le leggi di Keplero);</li>
+  <li>il moto della Luna intorno alla Terra;</li>
+  <li>le maree;</li>
+  <li>la traiettoria delle comete;</li>
+  <li>la caduta dei gravi sulla Terra.</li>
+</ul>
+
+<br>
+Newton mostrò che le stesse leggi fisiche governano l’intero universo, dalla mela che cade all’orbita dei pianeti: un’unificazione concettuale
+senza precedenti, che segnò la nascita della fisica classica.
+
+<br><br>
+Oltre alla meccanica celeste, Newton contribuì enormemente anche in ottica (dimostrando che la luce bianca è composta da colori) e in matematica
+(inventò il calcolo differenziale, parallelamente a Leibniz).
+
+<br><br>
+Fu una figura schiva, solitaria e a tratti ossessiva, ma la sua opera segnò il culmine della rivoluzione scientifica iniziata con Copernico
+e Galileo. Il suo universo era perfettamente meccanico e prevedibile, governato da leggi matematiche immutabili.
+Questa visione dominò la scienza per oltre due secoli, fino all’avvento della relatività e della meccanica quantistica nel Novecento.
+</b></p>
+
+  <hr>
+
+  <h2><b>XVIII Secolo: Nuovi pianeti e lune</b></h2>
+  <img src="diciotto.jpg" alt="Scoperte nel XVIII secolo">
+  <p><b>
+    Durante il XVIII secolo, l'astronomia visse un periodo di espansione e scoperta, grazie all'uso sempre più diffuso dei telescopi.
+    Una delle scoperte più significative fu quella di Urano, il primo pianeta individuato con l'ausilio di un telescopio.
+    L'astronomo britannico William Herschel lo osservò per la prima volta nel 1781, rivoluzionando la mappa del Sistema Solare.
+    Successivamente, Herschel scoprì anche due delle lune di Urano, Titania e Oberon, nel 1787. Nel 1789, scoprì due nuovi satelliti di Saturno:
+    Mimas ed Encelado, ampliando ulteriormente la conoscenza delle lune del gigante gassoso.
+  </b></p>
+
+  <hr>
+
+  <h2><b>XIX Secolo: Asteroidi e nuovi confini del Sistema Solare</b></h2>
+  <img src="dicianove.jpg" alt="Scoperte nel XIX secolo">
+  <p><b>
+    Il XIX secolo fu un periodo di grandi progressi, soprattutto nell'osservazione dei corpi celesti. Nel 1801, Giuseppe Piazzi scoprì Cerere,
+    inizialmente classificato come pianeta, poi come asteroide. Nel 1846, la scoperta di Nettuno confermò l’efficacia dei calcoli teorici.
+    Sempre nel XIX secolo, Friedrich Bessel riuscì a misurare per la prima volta la parallasse di una stella (61 Cygni) nel 1838.
+    L’introduzione della spettroscopia negli anni ’60 permise l’analisi della composizione chimica delle stelle.
+  </b></p>
+
+  <hr>
+
+  <h2><b>XX Secolo: L'universo in espansione e nuovi mondi</b></h2>
+  <img src="venti.jpg" alt="Universo in espansione">
+  <p><b>
+    Il XX secolo fu una rivoluzione astronomica. Nel 1929, Edwin Hubble scoprì l’espansione dell’universo.
+    Nel 1965, Penzias e Wilson rilevarono la radiazione cosmica di fondo. Nel 1995, Michel Mayor e Didier Queloz individuarono
+    il primo esopianeta, 51 Pegasi b, aprendo la strada alla moderna esplorazione dei mondi extrasolari.
+  </b></p>
+
+  <hr>
+
+  <h2><b>XXI Secolo: Buchi neri, onde gravitazionali e il cosmo profondo</b></h2>
+  <img src="ventuno.jpg" alt="Buchi neri e telescopi spaziali">
+  <p><b>
+    Nel 2015, il progetto LIGO rilevò le onde gravitazionali. Nel 2019, l'Event Horizon Telescope mostrò la prima immagine di un buco nero.
+    Nel 2021, il lancio del James Webb Space Telescope ha aperto una nuova era per l’osservazione del cosmo profondo e degli esopianeti.
+  </b></p>
+
+  <hr>
+
+</body>
+
+</html>
