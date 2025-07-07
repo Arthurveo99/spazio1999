@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('milkyway.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 30px auto 10px;
+      max-width: 700px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 40px 20px 20px;
+      text-align: left;
+    }
+
+    mark {
+      background-color: darkslateblue;
+      color: gold;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: gold;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+  display: block;
+  margin-left: 20px;
+}
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(0, 0, 50, 0.95);
+        padding-bottom: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    .dropdown {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .dropbtn {
+      background-color: navy;
+      color: gold;
+      padding: 16px;
+      font-size: 1.8rem;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      width: 220px;
+      text-align: center;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: navy;
+      width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: gold;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #b81414;
+      text-decoration: underline;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    img {
+      display: block;
+      margin: 40px auto 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+        padding: 10px;
+        max-width: 90%;
+      }
+
+      .dropbtn {
+        font-size: 1.2rem;
+        width: 180px;
+      }
+
+      .dropdown-content {
+        width: 180px;
+      }
+                                         
+      p {
+        font-size: 1rem;
+        margin: 20px;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="menu">
+    <li><a href="astroblog.html">Home Blog</a></li>
+    <li><a href="astrooss.html">A. Osservativa</a></li>
+    <li><a href="astrofisica.html">Astrofisica</a></li>
+    <li><a href="cosmologia.html">Cosmologia</a></li>
+    <li><a href="planetologia.html">A. Planetaria</a></li>
+    <li><a href="astrosolare.html">A. Solare</a></li>
+    <li><a href="astronews.html">News</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
+<h1>Che cosa sono le <span style="color: gold;">Costellazioni</span>?</h1>
+
+<div class="dropdown">
+  <button class="dropbtn"><b>Emisfero Boreale</b></button>
+  <div class="dropdown-content">
+    <a href="invernoboreale.html"><b>Inverno</b></a>
+    <a href="primaveraboreale.html"><b>Primavera</b></a>
+    <a href="estateboreale.html"><b>Estate</b></a>
+    <a href="autunnoboreale.html"><b>Autunno</b></a>
+  </div>
+</div>
+
+<img src="costellazioni.jpg" alt="Costellazioni">
+
+<p><b>
+  Le <span style="color: gold;">costellazioni</span> sono raggruppamenti apparenti di stelle nel cielo notturno che formano figure immaginarie legate a miti, animali o oggetti.
+  Sebbene le stelle di una stessa costellazione sembrino vicine tra loro, in realtà possono trovarsi a distanze molto diverse.
+  <br><br>
+  Le costellazioni hanno avuto un ruolo fondamentale per l’orientamento, la navigazione e l’agricoltura nelle antiche civiltà. Oggi sono 88 quelle ufficialmente riconosciute
+  dall’<mark>Unione Astronomica Internazionale</mark>, che ha anche stabilito i confini celesti tra ciascuna di esse.
+  <br><br>
+  Le costellazioni visibili cambiano con le stagioni e in base alla latitudine. In questa sezione puoi esplorare le principali <span style="color: gold;">costellazioni boreali</span>,
+  stagione per stagione.
+</b></p>
+
+</body>
+</html>
