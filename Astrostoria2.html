@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999 - Astronomia nel Medioevo</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('milkyway.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      margin: 30px auto;
+      padding: 15px 20px;
+      border-radius: 10px;
+      max-width: 700px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 20px;
+      text-align: justify;
+    }
+
+    mark {
+      background-color: darkslateblue;
+      color: white;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: gold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+        max-width: 90%;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="menu">
+    <li><a href="astroblog.html">Home Blog</a></li>
+    <li><a href="astrooss.html">A. Osservativa</a></li>
+    <li><a href="astrofisica.html">Astrofisica</a></li>
+    <li><a href="cosmologia.html">Cosmologia</a></li>
+    <li><a href="planetologia.html">A. Planetaria</a></li>
+    <li><a href="astrosolare.html">A. Solare</a></li>
+    <li><a href="astronews.html">News</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
+
+<h1><mark><i><b>Astronomia durante il Medioevo</b></i></mark></h1>
+
+<img src="medioevo1.jpg" alt="Osservazioni astronomiche medievali">
+
+  <p><b>
+    Il Medioevo fu un periodo lungo e complesso che vide profondi cambiamenti nel modo di concepire l’universo. Con la caduta dell’Impero Romano d’Occidente (476 d.C.),
+    molte conoscenze astronomiche dell’antichità greco-romana andarono perdute in Europa, ma vennero preservate nei monasteri cristiani,
+    dove i monaci trascrissero antichi testi, tra cui opere di Tolomeo, Aristotele e Platone.
+    <br><br>
+    Tuttavia, la vera rinascita dell’astronomia non avvenne in Occidente, bensì nel mondo islamico. Tra il VII e il XIII secolo,
+    il califfato arabo divenne un motore straordinario di diffusione del sapere: traduzioni dall’arabo di testi greci, come l’<i>Almagesto</i> di Tolomeo,
+    vennero accompagnate da osservazioni originali e miglioramenti teorici. Astronomi come Al-Battani perfezionarono il valore dell’anno solare;
+    Al-Sufi compilò un catalogo stellare aggiornato; Ibn al-Haytham sviluppò l’ottica e l’uso sistematico della sperimentazione.
+  </b></p>
+
+  <p><b>
+    Gli strumenti astronomici vennero perfezionati: l’<i>astrolabio</i>, già noto nell’antichità, divenne uno strumento fondamentale sia per l’osservazione celeste
+    sia per usi pratici come la navigazione e la determinazione dell’ora esatta per la preghiera. Le città di Baghdad, Damasco, Toledo e Cordova divennero
+    importanti centri di astronomia e scienza.
+  </b></p>
+
+  <img src="metodo.jpg" alt="Metodo scientifico nel Medioevo">
+
+  <p><b>
+    In Europa, l’influenza del pensiero aristotelico-tolemaico rimase dominante: la Terra immobile al centro dell’universo, circondata da sfere cristalline
+    su cui si muovevano i pianeti e le stelle. Questa visione era pienamente compatibile con la teologia cristiana, che poneva l’uomo e la Terra
+    al centro della creazione divina.
+    <br><br>
+    Dal XII secolo in poi, grazie alla mediazione araba, molti testi vennero tradotti in latino. Gerardo da Cremona tradusse l’Almagesto e oltre 70 trattati scientifici,
+    riportando in Europa un patrimonio astronomico dimenticato. Questo avviò un nuovo interesse per lo studio del cielo, soprattutto nelle scuole cattedrali
+    e nelle università medievali come quella di Parigi o di Bologna.
+  </b></p>
+
+  <p><b>
+    Pensatori come <i>Ruggero Bacone</i> (ca. 1214–1292), frate francescano e filosofo naturale, furono pionieri nell’utilizzo del metodo empirico.
+    Bacone sottolineava l'importanza dell'osservazione diretta e dell'esperienza per validare la conoscenza scientifica, in contrasto con il dogmatismo
+    basato solo sull'autorità dei testi antichi. Considerava la matematica il linguaggio universale della natura e riteneva che la scienza dovesse avere
+    anche una funzione pratica, anticipando in parte la visione moderna della tecnologia come applicazione del sapere.
+
+    <br><br>
+    Nel XIV secolo, altre importanti figure emersero. <i>Giovanni Buridano</i>, filosofo e teologo francese, formulò la teoria dell’<i>impetus</i>,
+    un’anticipazione del concetto d’inerzia. Secondo lui, un corpo in movimento continua a muoversi anche in assenza di una forza, contrariamente
+    alla visione aristotelica, che sosteneva che ogni moto dovesse essere costantemente “spinto”. Questa idea sarà fondamentale nel superamento
+    della fisica aristotelica e preparerà il terreno per la meccanica di Galileo e Newton.
+
+    <br><br>
+    <i>Nicole Oresme</i>, altro importante pensatore attivo all’Università di Parigi, ebbe intuizioni straordinarie. Egli si interrogò criticamente
+    sull'idea della Terra immobile e propose, come ipotesi teorica, che potesse ruotare su sé stessa. Pur rimanendo ufficialmente fedele
+    al modello geocentrico, il solo fatto di contemplare un’alternativa rappresentava un passo avanti rispetto al dogma.
+    Oresme produsse anche importanti riflessioni di tipo matematico e geometrico, introducendo grafici cartesiani secoli prima di Cartesio.
+
+    <br><br>
+    Questi fermenti intellettuali, nati in seno alla scolastica medievale, dimostrano che l’astronomia non era affatto “spenta” nel Medioevo,
+    ma stava lentamente preparando una trasformazione profonda. Le università europee — nate nel XII e XIII secolo — divennero ambienti
+    in cui il sapere veniva preservato, rielaborato e messo alla prova, anche se ancora inquadrato nel contesto religioso e filosofico dell’epoca.
+
+    <br><br>
+    Alla fine del Medioevo, si respirava dunque un’aria di transizione: da una cosmologia chiusa, simbolica e geocentrica,
+    verso una visione dinamica e razionale del cosmo. Quando nel 1543 Copernico pubblicò la sua opera rivoluzionaria,
+    l’Europa era pronta ad accogliere una nuova immagine dell’universo. Senza le basi gettate dagli studiosi medievali,
+    la rivoluzione copernicana — e con essa l’astronomia moderna — non sarebbe stata possibile.
+  </b></p>
+
+</body>
+
+</html>
