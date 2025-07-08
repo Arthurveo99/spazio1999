@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999-Astrofisica</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('milkyway.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+ nav ul li a {
+        font-size: 1rem;
+      }
+
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 30px auto 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    h2 {
+      background-color: darkslateblue;
+      color: gold;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 40px auto 20px;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      font-size: 1.1rem;
+      margin: 20px 40px;
+      line-height: 1.6;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    mark {
+      background-color: darkslateblue;
+      color: gold;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+     .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: gold;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 1100;
+      cursor: pointer;
+    }
+
+
+    @media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 50, 0.95);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    gap: 0;
+  }
+
+  nav ul li {
+    border-top: 1px solid gold;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    left: 20px;
+    right: auto;
+  }
+
+  nav {
+    position: relative;
+    padding: 10px 20px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
+      <li><a href="index.html">Home Blog</a></li>
+      <li><a href="astrooss.html">A. Osservativa</a></li>
+      <li><a href="astrofisica.html">Astrofisica</a></li>
+      <li><a href="cosmologia.html">Cosmologia</a></li>
+      <li><a href="planetologia.html">A. Planetaria</a></li>
+      <li><a href="astrosolare.html">A. Solare</a></li>
+      <li><a href="astronews.html">News</a></li>
+    </ul>
+  </nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
+
+
+  <h1>Astrofisica</h1>
+
+<img src="astrofisica.jpg" alt="Astrofisica - illustrazione concettuale" style="display: block; margin: 30px auto;
+ max-width: 500px; width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+
+  <p><b>
+    L'astrofisica è la scienza che studia l’universo applicando i principi della fisica e della chimica agli oggetti celesti e ai fenomeni cosmici.
+    A differenza dell'astronomia osservativa che si occupa della raccolta di dati, l’astrofisica li interpreta, cercando di capire il perché
+    delle cose: perché le stelle brillano? Come si formano i buchi neri? Da dove nasce la materia dell’universo?
+  </b></p>
+
+  <h2><b>Obiettivi dell'Astrofisica</b></h2>
+
+  <p><b>
+    L'obiettivo dell'astrofisica è comprendere la natura e il comportamento degli oggetti celesti attraverso le leggi della fisica.
+    Gli astrofisici combinano dati osservativi con modelli matematici e simulazioni per descrivere processi fondamentali come la nucleosintesi,
+    l’interazione gravitazionale e l’emissione di energia nelle diverse frequenze dello spettro elettromagnetico.
+  </b></p>
+
+  <ul>
+    <li><b><mark><a href="astrofstar.html">Astrofisica Stellare</a></mark></b> — Studia il ciclo vitale delle stelle, dai processi di formazione (protostelle) alla morte come nane bianche, stelle di neutroni o buchi neri.</li>
+    <li><b><mark><a href="astrofgal.html">Astrofisica Galattica</a></mark></b> — Analizza la struttura, la dinamica e l’evoluzione delle galassie, e i fenomeni legati alla <i>materia oscura</i>.</li>
+    <li><b><mark><a href="astrofaltener.html">Astrofisica delle Alte Energie</a></mark></b> — Si occupa di fenomeni estremi: buchi neri, raggi cosmici, esplosioni di supernova, e getti relativistici.</li>
+    <li><b><mark><a href="blackhole.html">Buchi Neri e materia circostante</a></mark></b> — Esamina la fisica dei dischi di accrescimento, dei getti e delle emissioni X provenienti dai buchi neri.</li>
+  </ul>
+
+  <h2><b>Misteri Cosmici: Materia ed Energia Oscura</b></h2>
+
+  <p><b>
+    Due delle più grandi sfide dell’astrofisica moderna sono la <span style="color:gold; background-color:black;">Materia Oscura</span> e
+    l’<span style="background-color:black; color:gold;">Energia Oscura</span>. Entrambe invisibili, costituiscono circa il 95% del contenuto dell'universo,
+    ma la loro vera natura è ancora sconosciuta.
+  </b></p>
+
+  <p><b>
+    La <i>materia oscura</i> non emette né assorbe luce, ma esercita un’influenza gravitazionale osservabile, ad esempio nella rotazione delle galassie:
+    le stelle ai margini si muovono troppo velocemente per la sola massa visibile. Questo suggerisce l’esistenza di un alone invisibile di materia.
+  </b></p>
+
+  <p><b>
+    L’<i>energia oscura</i>, invece, è responsabile dell’accelerazione dell’espansione dell’universo. Lo si è scoperto osservando le supernovae di tipo Ia e misurando il Redshift
+    delle galassie: più sono lontane, più si allontanano velocemente. Questo comporta che l’universo non solo si espande, ma lo fa in modo sempre più rapido.
+  </b></p>
+
+  <p><b>
+    Secondo il modello cosmologico ΛCDM (Lambda-Cold Dark Matter), il contenuto dell’universo è composto per il 5% da materia ordinaria (barionica),
+    per il 27% da materia oscura e per il 68% da energia oscura.
+  </b></p>
+
+</body>
+</html>
