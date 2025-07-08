@@ -1,0 +1,334 @@
+<!DOCTYPE html> 
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999 - Astronomia Osservativa</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('milkyway.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+   nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+ nav ul li a {
+        font-size: 1rem;
+      }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      margin: 30px auto 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      max-width: 700px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-style: italic;
+      text-align: center;
+      color: gold;
+      margin: 30px auto 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-style: italic;
+      text-align: justify;
+      margin: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .intro-img {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 400px;
+    }
+
+    mark {
+      background-color: darkslateblue;
+      color: gold;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    .section-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin: 30px 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid gold;
+      padding-bottom: 20px;
+    }
+
+    .section-block img {
+      width: 160px;
+      flex-shrink: 0;
+    }
+
+    .section-block p {
+      flex: 1;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .back-button a {
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .back-button a:hover {
+      background-color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: gold;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 1100;
+      cursor: pointer;
+    }
+
+   @media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 50, 0.95);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    gap: 0;
+  }
+
+  nav ul li {
+    border-top: 1px solid gold;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    left: 20px;
+    right: auto;
+  }
+
+  nav {
+    position: relative;
+    padding: 10px 20px;
+  }
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
+      <li><a href="index.html">Home Blog</a></li>
+      <li><a href="astrooss.html">A. Osservativa</a></li>
+      <li><a href="astrofisica.html">Astrofisica</a></li>
+      <li><a href="cosmologia.html">Cosmologia</a></li>
+      <li><a href="planetologia.html">A. Planetaria</a></li>
+      <li><a href="astrosolare.html">A. Solare</a></li>
+      <li><a href="astronews.html">News</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+  <h1><b>Astronomia Osservativa</b></h1>
+  <h2><mark><b>Introduzione</b></mark></h2>
+
+  <img src="astrooss.jpg" alt="Astronomia osservativa" class="intro-img">
+
+  <p><b>
+    L'astronomia osservativa è la branca della scienza astronomica che studia il cielo mediante l’analisi dei segnali provenienti dallo spazio,
+    come la luce visibile, le onde radio e le radiazioni ad alta energia. Dalle osservazioni a occhio nudo dell'antichità
+    ai moderni osservatori spaziali, questa disciplina ha trasformato radicalmente la nostra visione dell’universo.
+    <br><br>
+    Ogni tipo di radiazione fornisce informazioni diverse sugli oggetti celesti. Per questo l’astronomia moderna si è specializzata
+    in più settori osservativi, ciascuno con strumenti dedicati, sia da terra che nello spazio.
+  </b></p>
+
+  <!-- Sezioni di astronomia osservativa (approfondite) -->
+  <div class="section-block">
+    <img src="radio.jpg" alt="Astronomia Radio">
+    <p><b>
+        <u><mark>Astronomia Radio</mark></u><br>
+        Studia l’universo attraverso le onde radio emesse da oggetti come quasar, pulsar, galassie attive e resti di supernovae.
+        Grazie a enormi radiotelescopi (es. FAST, VLA), è possibile osservare fenomeni invisibili alla luce visibile,
+        come la struttura della Via Lattea o le nubi di idrogeno interstellare.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="microonde.jpg" alt="Astronomia Microonde">
+    <p><b>
+        <u><mark>Astronomia a Microonde</mark></u><br>
+        Analizza la Radiazione Cosmica di Fondo (CMB), un residuo dell'universo primordiale. Satelliti come COBE, WMAP e Planck
+        hanno mappato le minuscole variazioni della temperatura cosmica, aiutando a comprendere l’origine e la struttura dell’universo.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="infrarosso.jpg" alt="Astronomia Infrarossa">
+    <p><b>
+        <u><mark>Astronomia Infrarossa</mark></u><br>
+        Permette di osservare oggetti celesti nascosti dalle polveri cosmiche, come stelle in formazione e dischi protoplanetari.
+        Telescopi come Spitzer e James Webb esplorano l’universo in questa banda, rivelando galassie lontane e fredde
+        che non emettono luce visibile.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="visibile.jpg" alt="Astronomia Ottica">
+    <p><b>
+        <u><mark>Astronomia Ottica</mark></u><br>
+        È la forma tradizionale di osservazione astronomica. Utilizza la luce visibile per analizzare stelle, pianeti, galassie e nebulose.
+        I telescopi terrestri e spaziali, come Hubble, hanno permesso scoperte cruciali sulla struttura dell’universo e
+        sull’evoluzione delle stelle.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="ultravioletto.jpg" alt="Astronomia UV">
+    <p><b>
+        <u><mark>Astronomia Ultravioletto</mark></u><br>
+        Indaga stelle giovani e calde, resti di supernovae e regioni ionizzate. La radiazione UV viene assorbita dall’atmosfera,
+        perciò è osservata tramite telescopi spaziali come Hubble e GALEX. Rende possibile lo studio delle fasi più dinamiche della vita stellare.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="raggix.jpg" alt="Astronomia Raggi X">
+    <p><b>
+        <u><mark>Astronomia a Raggi X</mark></u><br>
+        Esamina oggetti estremamente energetici come buchi neri, stelle di neutroni e ammassi di galassie.
+        I raggi X non raggiungono la superficie terrestre, quindi vengono osservati con telescopi in orbita come Chandra e XMM-Newton.
+    </b></p>
+  </div>
+
+  <div class="section-block">
+    <img src="raggigamma.jpg" alt="Astronomia Raggi Gamma">
+    <p><b>
+        <u><mark>Astronomia a Raggi Gamma</mark></u><br>
+        È la più energetica tra tutte le bande. Studia lampi gamma, buchi neri in fusione, eventi cosmici estremi.
+        I telescopi Fermi e MAGIC rilevano queste emissioni dallo spazio o da alte quote terrestri.
+    </b></p>
+  </div>
+
+  <!-- Strumenti e tecnologie -->
+  <h2><mark><b>Strumenti e Tecnologie</b></mark></h2>
+
+  <p><b>
+    L’astronomia moderna utilizza strumenti avanzati per osservare il cielo in tutte le frequenze. Ecco i principali:
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">Telescopi Ottici</span></u><br>
+    A rifrazione e riflessione, amplificano la luce visibile. Installati in zone secche e buie, come il deserto di Atacama o le Hawaii.
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">Radiotelescopi</span></u><br>
+    Enormi parabole che captano onde radio. Operano in gruppo per formare interferometri e ottenere immagini dettagliate.
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">Spettroscopi</span></u><br>
+    Analizzano la luce in ogni lunghezza d’onda per determinare la composizione, temperatura e velocità degli oggetti celesti.
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">CCD</span></u><br>
+    Sensori elettronici che catturano immagini astronomiche digitali con alta sensibilità e basso rumore.
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">Osservatori Spaziali</span></u><br>
+    Telescopi in orbita come Hubble, James Webb, Chandra, Fermi. Rivelano bande di radiazione assorbite dall’atmosfera.
+  </b></p>
+
+  <p><b>
+    <u><span style="color:gold; font-style:italic;">Interferometri</span></u><br>
+    Combinano più antenne o telescopi per aumentare la risoluzione. Essenziali in radioastronomia e osservazioni millimetriche.
+  </b></p>
+
+  <!-- Pulsante di ritorno -->
+  <div class="back-button">
+    <a href="index.html">← Torna al Blog</a>
+  </div>
+
+</body>
+</html>
