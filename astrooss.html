@@ -7,151 +7,160 @@
   <title>Spazio1999 - Astronomia Osservativa</title>
   <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('milkyway.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-   nav {
-      background-color: rgba(0, 0, 50, 0.85);
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('milkyway.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+nav {
+  background-color: rgba(0, 0, 50, 0.85);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav ul li a {
-      color: gold;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 8px 16px;
-      transition: background-color 0.3s;
-    }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    nav ul li a:hover {
-      background-color: gold;
-      color: black;
-      border-radius: 8px;
-    }
- nav ul li a {
-        font-size: 1rem;
-      }
+nav ul li a {
+  color: gold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
 
-    h1 {
-      background-color: darkslateblue;
-      color: white;
-      font-size: 2.2rem;
-      font-style: italic;
-      text-align: center;
-      margin: 30px auto 20px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      max-width: 700px;
-    }
+nav ul li a:hover {
+  background-color: gold;
+  color: black;
+  border-radius: 8px;
+}
 
-    h2 {
-      font-size: 1.5rem;
-      font-style: italic;
-      text-align: center;
-      color: gold;
-      margin: 30px auto 15px;
-    }
+h1 {
+  background-color: darkslateblue;
+  color: white;
+  font-size: 2.2rem;
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 700px;
+}
 
-    p {
-      font-size: 1.1rem;
-      font-style: italic;
-      text-align: justify;
-      margin: 20px 5px;
-      
-    }
+h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  color: gold;
+  margin: 30px auto 15px;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+p {
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: justify;
+  margin: 15px auto;
+  padding: 0 10px;
+  max-width: 100%;
+}
 
-    .intro-img {
-      display: block;
-      margin: 0 auto 20px;
-      max-width: 400px;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
 
-    mark {
-      background-color: darkslateblue;
-      color: gold;
-      padding: 2px 5px;
-      border-radius: 3px;
-    }
+.intro-img {
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+}
+mark {
+  background-color: darkslateblue;
+  color: gold;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
 
-    .section-block {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin: 30px 20px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid gold;
-      padding-bottom: 20px;
-    }
+.section-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 30px 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid gold;
+  padding-bottom: 20px;
+}
 
-    .section-block img {
-      width: 160px;
-      flex-shrink: 0;
-    }
+.section-block img {
+  width: 160px;
+  flex-shrink: 0;
+}
 
-    .section-block p {
-      flex: 1;
-    }
+.section-block p {
+  flex: 1;
+}
 
-    .back-button {
-      text-align: center;
-      margin: 40px 0;
-    }
+.back-button {
+  text-align: center;
+  margin: 40px 0;
+}
 
-    .back-button a {
-      background-color: gold;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
+.back-button a {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 
-    .back-button a:hover {
-      background-color: white;
-    }
+.back-button a:hover {
+  background-color: white;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: gold;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      z-index: 1100;
-      cursor: pointer;
-    }
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: gold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1100;
+  cursor: pointer;
+}
 
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: rgba(0, 0, 50, 0.95);
+    background-color: transparent !important;
     position: absolute;
     top: 50px;
     left: 0;
@@ -184,21 +193,36 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 10px 10px;
+  }
+
+  .section-block img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .section-block p {
-    text-align: justify;
+    width: 95%;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: left;
+  }
+
+  p {
+    margin: 15px 10px;
+    padding: 0 5px;
   }
 }
-
-
 
 
   </style>
 </head>
 
 <body>
-
+<div class="wrapper">
+  
   <nav>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <ul id="menu">
@@ -341,6 +365,6 @@
   <div class="back-button">
     <a href="index.html">← Torna al Blog</a>
   </div>
-
+</div>
 </body>
 </html>
