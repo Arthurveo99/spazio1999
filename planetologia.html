@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999 - Astronomia Solare</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("milkyway.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+  list-style-type: none;
+  margin: 0 auto; /* centro orizzontale */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px; /* opzionale, per evitare che si allarghi troppo */
+}
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 30px auto 10px;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+    h3 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 0 15px;
+      text-align: justify;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: gold;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background-color: rgba(0, 0, 50, 0.8);
+      font-size: 1.2rem;
+      margin-top: 60px;
+    }
+    
+    ul {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 0 15px;
+      text-align: justify;
+      font-weight: bold;
+      }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 50, 0.95);
+        padding: 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 12px 0;
+      }
+     p{text-align:left;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Apri il menu">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home Blog</a></li>
+      <li><a href="astrooss.html">A. Osservativa</a></li>
+      <li><a href="astrofisica.html">Astrofisica</a></li>
+      <li><a href="cosmologia.html">Cosmologia</a></li>
+      <li><a href="planetologia.html">A. Planetaria</a></li>
+      <li><a href="astrosolare.html">A. Solare</a></li>
+      <li><a href="astronews.html">News</a></li>
+    </ul>
+  </nav>
+
+<h1>Astronomia planetaria</h1>
+
+<div style="text-align: center;">
+<img src="planetologia.png" 
+srcset="planetologia.png 600w, planetologia.png 1200w, planetologia.png 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+</div>
+
+<h2>Definizione e obiettivi</h2>
+
+<p>L’astronomia planetaria (o planetologia) è la disciplina che studia i pianeti, le loro lune e gli altri corpi del Sistema Solare – e oggi anche i pianeti extrasolari – analizzandone composizione, struttura, atmosfera e origini. In pratica si intende «lo studio delle proprietà fisiche dei corpi planetari, esteso a tutti i corpi celesti non stellari». 
+Gli obiettivi principali sono: comprendere come si siano formati ed evoluti i pianeti e i sistemi planetari, caratterizzare la geologia e il clima di ogni mondo (es. confrontando gli ambienti di Marte, Venere, Terra…), e indagare la possibilità di forme di vita oltre la Terra. Nascono così discipline specifiche come la climatologia planetaria e la geologia comparata.</p>
+
+<p>Un’attenzione crescente è dedicata agli esopianeti (pianeti orbitanti altre stelle): scoprirli, misurarne le dimensioni e studiarne le atmosfere per cercare segni di abitabilità.
+Obiettivi principali: capire l’origine e l’evoluzione dei pianeti, analizzarne la composizione (nucleo, superficie, atmosfera), studiare fenomeni come tettonica e vulcanismo, e individuare pianeti potenzialmente abitabili. Si cerca inoltre di ricostruire la formazione del Sistema Solare confrontando i pianeti interni, esterni e le corpi minori (asteroidi, comete) tra loro.</p>
+
+<h2>Evoluzione storica della disciplina</h2>
+
+<p>Le radici dell’astronomia planetaria affondano nelle antiche civiltà (Calendari egizi, osservazioni babilonesi). Il grande cambiamento avvenne con la rivoluzione copernicana (1543), che spostò la Terra dal centro, e con Galileo (1610), il quale con il telescopio scoprì le lune di Giove, dimostrando che non tutti gli oggetti orbitano attorno alla Terra. 
+Nei secoli successivi i miglioramenti dei telescopi permisero di scoprire altri pianeti: Uranus fu individuato nel 1781 da William Herschel, Nettuno nel 1846 fu calcolato e infine osservato, e Plutone nel 1930 (poi ridefinito pianeta nano). In particolare, nell’Ottocento astronomi come Giovanni Schiaparelli e Eugene Antoniadi studiarono Marte e Venere dal suolo, segnando i primi passi pionieristici della planetologia.</p> 
+
+<p>Con l’era spaziale (dopo il 1957) l’esplorazione si è estesa fisicamente ai pianeti: le missioni interplanetarie hanno rivoluzionato le conoscenze in pochi decenni. Negli anni ’60 e ’70 furono inviate sonde come Mariner, Pioneer e le icone Voyager (lanciate nel 1977), che passarono vicino a Giove, Saturno, Urano e Nettuno. Apollo portò l’uomo sulla Luna (1969); 
+le orbiter Messenger, Magellan, Mars Global Surveyor e i rover su Marte (Viking, Pathfinder, i moderni rover Opportunity/Curiosity/Perseverance) hanno ricostruito le mappe geologiche dei pianeti interni. Nel 1995 è stato annunciato il primo esopianeta orbitante attorno a una stella di tipo solare (51 Pegasi b), inaugurando l’era degli esopianeti. Da allora la scoperta di nuovi mondi extrasolari è esplosa, superando le migliaia di esemplari conosciuti oggi.</p>
+
+<h2>Metodi di osservazione e strumenti</h2>
+
+<p>Per studiare i pianeti si ricorre a osservazioni indirette e dirette con svariati strumenti. Ad esempio, il metodo dei transiti (illustrazione sopra) misura il lieve calo di luminosità di una stella quando un pianeta le passa davanti. È il metodo più produttivo per gli esopianeti: oltre 4200 pianeti sono stati scoperti da telescopi spaziali come Kepler e TESS tramite transiti.</p>
+
+<h2>Altre tecniche utilizzate sono:</h2>
+<ul>
+<li>Velocità radiali (Doppler): misura le piccole oscillazioni nella velocità radiale di una stella causate dalla gravità di un pianeta. Introdotto già negli anni ’90, è stato il primo metodo di successo e ha confermato migliaia di esopianeti.</li>
+
+<li>Astrometria: rileva lo spostamento apparentemente retrogrado di una stella nel cielo (a causa del pianeta che le fa orbitare intorno al baricentro). Ad oggi con l’astrometria (per esempio dalla missione ESA Gaia) sono stati individuati oltre 1000 esopianeti.</li>
+
+<li>Microlente gravitazionale: cerca l’effetto di lente gravitazionale prodotto da un sistema stella+pianeta su una stella di fondo, consentendo di scoprire pianeti anche molto lontani o di piccola massa.</li>
+
+<li>Immagine diretta: grandi telescopi (terrestri o spaziali, come Hubble o JWST) con speciali coronografi cercano di catturare direttamente la debole luce riflessa dai pianeti extrasolari vicini. Finora pochi esopianeti sono stati fotografati direttamente.</li>
+</ul>
+<p>Per i pianeti del Sistema Solare usiamo sia osservazioni da Terra (telescopi ottici e radio) sia soprattutto sonde spaziali. Alcuni esempi chiave: le missioni Mariner e Viking negli anni ’60 e ’70 hanno trasmesso le prime immagini ravvicinate di Marte e Venere; Cassini–Huygens (NASA/ESA) ha esplorato Saturno e Titano (2004‑2017); Galileo (NASA) ha orbitato Giove (1995‑2003); la sonda Juno (NASA) sta studiando Giove oggi; New Horizons (2015) ha sorvolato Plutone e i suoi satelliti. Le future missioni (come ESA JUICE su Giove/Europa e NASA Europa Clipper) continueranno a fornire dati preziosi. A terra, grandi telescopi come il Very Large Telescope (ESO) o il futuro ELT analizzano spettri planetari e atmosferici con grandissima precisione.</p>
+
+<h2>Stato attuale della conoscenza</h2>
+
+<p>Nel Sistema Solare i pianeti interni (Mercurio, Venere, Terra, Marte) sono rocciosi, mentre quelli esterni (Giove, Saturno, Urano, Nettuno) sono giganti gassosi o ghiacciati. Alcuni dati e curiosità: Mercurio è piccolo e quasi privo di atmosfera, con escursioni termiche estreme; Venere è ricoperto da dense nubi di acido solforico e ha un effetto serra che porta T≃460 °C; Marte ha un’atmosfera rarefatta (CO₂) e tracce di antichi letti fluviali. Giove, il più massiccio pianeta (gas di H/He), ospita la Grande Macchia Rossa, una tempesta così grande da contenere almeno tre pianeti Terra. Saturno è celebre per i suoi anelli (sottilissimi: spessi solo ~1,5 km nonostante il diametro di 250.000 km) e per Titano, la luna più grande con atmosfera densa e laghi di metano. Urano è un gigante ghiacciato con l’asse inclinato quasi di 90°; Nettuno, simile a Urano, ha venti supersonici.</p>
+
+<p>Tra i pianeti nani, Cerere e Plutone mostrano geologia attiva (come i geyser di azoto su Plutone). Parallelamente, la ricerca di esopianeti ha confermato migliaia di nuovi mondi: a fine 2024 erano noti oltre 7.300 pianeti extrasolari. La grande maggioranza è stata scoperta dal transito (Kepler, TESS) e dalla velocità radiale. Si trovano giganti gassosi vicini alla loro stella (“Hot Jupiter”), ma anche super-Terre (pianeti rocciosi più grandi della Terra) e “mini-Nettuni” (tra Terra e Nettuno). Alcuni esopianeti orbiteranno nella fascia abitabile: per esempio Gliese 12 b (a ~40 a.l.) ha dimensioni e temperature superficiali stimate simili alla Terra (10–41 °C); un altro, TOI-715 b, con massa ~3×Terra, orbita proprio nella zona temperata della sua stella.</p>
+
+<p>La sfida odierna è caratterizzare queste atmosfere: telescopi come il JWST stanno già misurando spettri di luce stellare filtrata dagli strati planetari per cercare vapore acqueo, biosignature o indizi di composti organici.</p>
+
+<h2>Scoperte recenti e frontiere</h2>
+
+<p>Negli ultimi anni la ricerca planetaria ha compiuto notevoli passi avanti su atmosfere, mondi oceanici e abitabilità:</p>
+<ul>
+<li>Atmosfere planetarie: il telescopio spaziale James Webb ha analizzato i gas di diversi pianeti. Per esempio, ha rivelato una nuova corrente ad alta velocità nell’atmosfera superiore di Giove e numerose strutture complesse sopra la Grande Macchia Rossa. Ha inoltre iniziato a sondare le atmosfere di esopianeti lontani, cercando tracce di acqua e molecole organiche. 
+Le spettroscopie da Terra (VLT, ALMA) completano lo studio degli strati atmosferici dei giganti gassosi e dei pianeti terrestri.</li>
+
+<li>Mondi oceanici: missioni recenti hanno scoperto indizi di oceani nascosti sotto le croste ghiacciate. Nel 2024 si è ipotizzato un oceano sotterraneo sotto la superficie di Mimas (luna di Saturno), basandosi su dati Cassini, e anche di Miranda (luna di Urano) attraverso modelli al computer e vecchie immagini Voyager. Queste scoperte aumentano l’elenco dei “mondi oceanici” (come Europa, Encelado) che potrebbero ospitare ambienti liquidi riscaldati internamente.</li>
+
+<li>Pianeti potenzialmente abitabili: la catalogazione di esopianeti comprende ormai diverse super-Terre nella fascia abitabile. Oltre a Gliese 12 b e TOI-715 b, studi teorici individuano pianeti di dimensioni terrestri con atmosfera sottile come i target più promettenti. L’analisi delle comete e degli asteroidi (es. campioni di Bennu) mostra la presenza di composti organici e acqua, suggerendo che gli elementi chimici per la vita siano diffusi nel sistema. In prospettiva, future missioni e telescopi (es. ARIEL, ELT ecc.) cercheranno firme biologiche e ulteriori indizi di abitabilità su altri mondi.</li>
+</ul>
+<p>In sintesi, l’astronomia planetaria oggi unisce tecniche tradizionali e missioni all’avanguardia per esplorare i pianeti vicini e lontani. Grazie ai continui progressi tecnologici e agli ampi database raccolti, il futuro promette nuove sorprese sulla formazione dei pianeti e forse la scoperta di vita oltre la Terra</p>
+  <footer>
+    &copy; Blog di Arthur Veo – Spazio1999
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+  </script>
+
+</body>
+</html>
