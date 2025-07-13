@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spazio1999 - Astronomia Solare</title>
+  <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("milkyway.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 50, 0.85);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+    }
+
+    h1 {
+      background-color: darkslateblue;
+      color: white;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 30px auto 10px;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 0 15px;
+      text-align: justify;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: gold;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background-color: rgba(0, 0, 50, 0.8);
+      font-size: 1.2rem;
+      margin-top: 60px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 50, 0.95);
+        padding: 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 12px 0;
+      }
+     p{text-align:left;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Apri il menu">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home Blog</a></li>
+      <li><a href="astrooss.html">A. Osservativa</a></li>
+      <li><a href="astrofisica.html">Astrofisica</a></li>
+      <li><a href="cosmologia.html">Cosmologia</a></li>
+      <li><a href="planetologia.html">A. Planetaria</a></li>
+      <li><a href="astrosolare.html">A. Solare</a></li>
+      <li><a href="astronews.html">News</a></li>
+    </ul>
+  </nav>
+
+ <h1>Astronomia Solare</h1>
+
+<h2>Panoramica Generale sul Sole</h2>
+
+<div style="text-align: center;">
+<img src="sole.png" 
+srcset="sole.png 600w, sole.png 1200w, sole.png 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+</div>
+
+
+<p>Il Sole è la stella al centro del nostro Sistema Solare, una nana gialla di sequenza principale classificata come tipo spettrale G2 V. Si è formato circa 4,6 miliardi di anni fa e costituisce oltre il 99% della massa dell’intero Sistema Solare. Il Sole ha un diametro di circa 1,39 milioni di km (109 volte quello terrestre) e una massa di 1,99 × 10^30 kg (circa 330.000 volte la massa della Terra). È composto principalmente da idrogeno (~70% in massa) ed elio (~28%), con tracce di elementi più pesanti (~2%). Non ha una superficie solida – è un’enorme sfera di plasma incandescente – e la forza di gravità della sua massa tiene uniti tutti i pianeti e corpi minori nelle loro orbite attorno ad esso.</p>
+
+<h2>Schema della struttura interna ed esterna del Sole.</h2>
+
+<p>Il Sole presenta una serie di strati concentrici. Internamente troviamo il nucleo centrale (circa il 25% del raggio solare), dove avvengono le reazioni termonucleari, circondato dalla zona radiativa e quindi dalla zona convettiva. Esternamente, il “surface” visibile del Sole è la fotosfera, sopra la quale si estendono gli strati dell’atmosfera solare: la cromosfera, una sottile regione di transizione, e la corona estesa (la tenue atmosfera esterna). Oltre la corona, il Sole emette un flusso continuo di particelle cariche (il vento solare) che crea un’enorme bolla chiamata eliosfera, la quale avvolge l’intero Sistema Solare. Il Sole, insieme al suo corteo di pianeti, orbita attorno al centro della Via Lattea in circa 230 milioni di anni, muovendosi nel Braccio di Orione della galassia (a circa 25-28 mila anni luce dal centro galattico). In sintesi, pur essendo una stella di dimensioni e luminosità medie rispetto ad altre, il Sole è la fonte di luce e calore che rende possibile la vita sulla Terra e il motore dell’ambiente spaziale in cui il nostro pianeta è immerso.</p>
+
+<h2>I processi fisici nel Sole</h2>
+
+<p>Fusione nucleare nel nucleo: Nel cuore del Sole l’idrogeno viene continuamente fuso in elio tramite reazioni di fusione nucleare (principalmente tramite la catena protone-protone). Le condizioni nel nucleo sono estreme: temperature di ~15 milioni °C e pressioni elevatissime permettono alle particelle di vincere la repulsione elettrostatica e innescare queste reazioni. Ogni secondo, il Sole converte circa 4 milioni di tonnellate di massa in energia sotto forma di fotoni, secondo la famosa equazione E=mc². L’enorme flusso di energia generato crea una pressione di radiazione verso l’esterno che contrasta l’autogravità della stella, mantenendo il Sole in equilibrio idrostatico. Trasporto dell’energia (zona radiativa e convettiva): L’energia prodotta nel nucleo si propaga verso la superficie attraverso strati successivi.</p>
+
+<p>Nella zona radiativa, che occupa all’incirca il 70% del raggio solare, l’energia viene trasportata principalmente per irraggiamento: i fotoni vengono continuamente assorbiti e riemessi dalle particelle, seguendo un cammino “a zig-zag” estremamente lento. Si stima che un fotone impieghi in media 170.000 anni per uscire dal nucleo e attraversare la zona radiativa. Quando la temperatura scende sotto ~2 milioni °C, nei pressi di ~0,7 raggi solari, il plasma diventa meno ionizzato e opaco: in questa zona convettiva esterna l’energia viene trasportata per convezione. Enormi bolle di gas caldo si innalzano dal fondo della zona convettiva verso la superficie, raffreddandosi e ricadendo verso l’interno in celle circolatorie. Questo moto convettivo – visibile in superficie come la granulazione fotosferica (migliaia di celle brillanti di ~1000 km) – trasferisce rapidamente l’energia rimanente fino alla fotosfera, da cui viene infine irradiata nello spazio sotto forma di luce e altre radiazioni elettromagnetiche. Campo magnetico e dinamo solare: Il Sole è pervaso da un intenso campo magnetico globale, generato internamente tramite un effetto dinamo.</p>
+
+<p>In parole semplici, la combinazione tra la rotazione differenziale del Sole e i moti convettivi del plasma carico genera correnti elettriche che producono campi magnetici. Il Sole infatti ruota più velocemente all’equatore (circa 25 giorni) che ai poli (circa 36 giorni), e anche gli strati interni (zona radiativa) ruotano con periodi diversi rispetto alla superficie convettiva.</p>
+
+<p>Questa rotazione differenziale “attorciglia” e amplifica le linee di campo magnetico (effetto Omega), mentre i moti turbolenti convettivi le piegano e riconnettono (effetto Alpha), sostenendo un ciclo magnetico autorigenerante. Il risultato macroscopico è il ciclo solare di circa 11 anni, durante il quale l’attività magnetica del Sole cresce e decresce periodicamente. Al minimo del ciclo il campo magnetico solare è più semplice e vicino a un dipolo, mentre al massimo solare il campo è estremamente aggrovigliato e l’attività è intensa (numerose macchie, brillamenti, etc.).</p> 
+
+<p>Circa ogni 11 anni i poli magnetici del Sole si invertono (il nord e il sud magnetico si scambiano) segnando il massimo del ciclo, dopodiché il campo si riassesta progressivamente. Questo ciclo undecennale si manifesta visibilmente con l’andamento del numero di macchie solari (diagramma a farfalla) e con cambiamenti nell’estensione dei buchi coronali polari. La “dinamo solare” alla base di tutto ciò è oggetto di approfonditi studi e modellizzazione, ma è fondamentale per comprendere l’evoluzione a lungo termine del comportamento della nostra stella.</p>
+
+<h2>Manifestazioni dell’attività solare</h2>
+
+<p>L’attività magnetica del Sole si manifesta con una serie di fenomeni osservabili sulla sua superficie e nella corona. Ecco le principali manifestazioni dell’attività solare:
+Macchie solari: appaiono come macchie scure sulla fotosfera, poiché sono regioni a temperatura più bassa (~4.000 K, rispetto ai ~5.800 K circostanti) dovuta all’emersione di forti campi magnetici locali che inibiscono il trasporto di calore. In realtà sono tutto fuorché piccole: molte macchie raggiungono diametri di decine di migliaia di km, talvolta visibili anche a occhio nudo col Sole filtrato. Le macchie tendono ad apparire in gruppi e a concentrarsi in fasce di latitudine specifiche a seconda del ciclo solare. Possono persistere da pochi giorni a qualche mese, evolvendo in numero e posizione con il ciclo undecennale. Le macchie sono spesso la “culla” di altri fenomeni attivi, poiché le regioni magneticamente complesse attorno ad esse generano brillamenti ed espulsioni coronali.</p>
+
+<p>Brillamenti solari (solar flares): sono violente esplosioni di radiazione e particelle ad alta energia sulla superficie del Sole, causate dalla riconnessione improvvisa di linee di campo magnetico intrecciate nelle regioni attive. Un brillamento rilascia in pochi minuti un’enorme quantità di energia (fino a ~10^25 Joule, paragonabile a miliardi di bombe all’idrogeno). I brillamenti si classificano in classi (A, B, C, M, X) in base al picco di raggi X emessi. Durante un flare, la luminosità a raggi X/UV del Sole aumenta repentinamente e vengono accelerati elettroni e protoni a velocità relativistiche. Sulla fotosfera, i brillamenti appaiono come bagliori intensi che possono saturare i sensori; nella corona producono onde d’urto e onde magnetiche. I brillamenti più potenti (classe X) possono dare luogo a blackout radio temporanei sulla Terra e accelerare particelle che raggiungono l’ambiente terrestre in poche decine di minuti.</p>
+
+<p>Protuberanze solari: sono enormi archi di plasma denso e relativamente “freddo” (circa 10.000 K, color rossastro in H-alfa) sospesi sopra la superficie solare e ancorati al campo magnetico solare. Quando viste di taglio sul bordo solare appaiono come spettacolari “lingue di fuoco” che si estendono dalla cromosfera verso la corona; viste di fronte sul disco solare, appaiono invece come filamenti scuri contorti. Le protuberanze possono durare da giorni a settimane, mantenute in equilibrio dal campo magnetico. Talvolta però diventano instabili ed eruttano: il plasma confinato viene espulso violentemente nello spazio interplanetario. Un’eruzione di protuberanza spesso coincide con un’espulsione di massa coronale (vedi sotto). Vento solare: è il flusso continuo di particelle cariche (principalmente protoni ed elettroni) emesso dalla corona e che fluisce verso l’esterno riempiendo lo spazio interplanetario. Dopo aver superato la corona ed essersi accelerato a velocità supersoniche, il plasma della corona sfugge all’attrazione solare formando questo vento che investe tutti i pianeti.</p> 
+
+<p>Il vento solare presenta tipicamente due componenti: un vento veloce (~700 km/s) originato dai buchi coronali alle alte latitudini (regioni di corona aperte con linee di campo “aperte” nello spazio), e un vento lento (~300-500 km/s) originato vicino all’equatore e alle regioni connesse a linee di campo chiuse. Il vento solare, pur essendo tenue (qualche particella per cm³ vicino alla Terra), ha un impatto costante: il suo campo magnetico trascinato forma il campo magnetico interplanetario e modula i raggi cosmici galattici. L’interazione del vento solare con il campo magnetico terrestre è all’origine del fenomeno delle aurore e delle tempeste magnetiche (vedi oltre).</p>
+
+<p>L’eliosfera è la gigantesca “bolla” di spazio dominata dal vento solare e dal campo magnetico solare, che si estende ben oltre l’orbita di Plutone (il suo limite esterno, l’eliopausa, è a ~120 UA dal Sole). Espulsioni di massa coronale (CME): sono enormi bolle di plasma magnetizzato espulse dalla corona solare nello spazio. Una singola CME può contenere miliardi di tonnellate di plasma e viaggiare a velocità di milioni di km/h. Spesso le espulsioni coronali avvengono in concomitanza o subito dopo un brillamento particolarmente intenso, ma non sempre le due cose coincidono. Una CME tipica si manifesta come una nube in espansione di materiale coronale espulso, visibile nelle immagini di coronografo. Man mano che si espande, può raggiungere dimensioni di decine di milioni di km. Quando diretta verso la Terra, una CME può investire il nostro pianeta in 1–3 giorni, causando un brusco sconvolgimento del campo magnetico terrestre (tempesta geomagnetica).</p> 
+
+<p>Gli effetti possono includere intense aurore a basse latitudini, disturbi alle comunicazioni radio, malfunzionamenti nei satelliti e induzioni di correnti anomale nelle linee elettriche terrestri. Le CME sono tra i fenomeni solari più energetici e rappresentano un aspetto cruciale del meteo spaziale in quanto i loro impatti possono propagarsi fino alla Terra e oltre.</p>
+
+<h2>Effetti dell’attività solare sulla Terra e nello spazio circumterrestre</h2>
+
+<p>L’attività solare non rimane confinata al Sole, ma influisce direttamente sull’ambiente della Terra e dello spazio a noi vicino. Le condizioni variabili del vento solare e del campo magnetico interplanetario, soprattutto durante eventi come brillamenti e CME, costituiscono il cosiddetto “meteo spaziale” (space weather), che può avere effetti sia affascinanti che potenzialmente dannosi. Uno degli effetti più spettacolari dell’interazione tra il Sole e la Terra sono le aurore polari. Quando particelle cariche ad alta energia provenienti dal Sole (accelerate da brillamenti o trasportate in una CME) raggiungono la Terra, molte vengono deviate dal campo magnetico terrestre verso le regioni polari, dove penetrano nelle fasce alte dell’atmosfera. Qui colpiscono atomi e molecole dell’aria (ossigeno, azoto, eccitandoli) e facendo emettere luce di varie tonalità di verde, rosso, viola. Il risultato sono veli luminosi danzanti nel cielo notturno – l’aurora boreale nell’emisfero nord e l’aurora australe in quello sud.</p>
+
+<p>Durante le tempeste geomagnetiche più intense, le aurore possono estendersi a latitudini insolitamente basse: ad esempio durante il celebre Evento di Carrington del 1859 le aurore furono avvistate fino a Cuba, Hawaii e in Italia, tanto brillanti che sembrava fosse giorno. In situazioni normali le aurore rimangono alle alte latitudini, dove costituiscono un fenomeno atmosferico spettacolare ma innocuo per la vita quotidiana. Effetti più incisivi si hanno con le tempeste geomagnetiche prodotte dalle CME e dal vento solare energizzato. Quando una CME colpisce la magnetosfera terrestre, il rapido cambiamento del campo magnetico induce correnti elettriche anomale sia nello spazio che nel suolo. Queste correnti geomagnetiche indotte possono sovraccaricare conduttori di grande lunghezza sulla Terra.</p> 
+
+<p>Un esempio noto è avvenuto il 13 marzo 1989, quando una potente tempesta geomagnetica innescata da un brillamento solare mandò in crisi la rete elettrica del Québec (Canada) causando un blackout su vasta scala che lasciò circa 6 milioni di persone senza elettricità per oltre 9 ore. Le tempeste geomagnetiche possono anche perturbare i satelliti in orbita: i cambiamenti di corrente e l’aumento di particelle energetiche possono mandare in modalità sicura i satelliti, danneggiare componenti elettroniche e degradare le loro orbite (riscaldando l’atmosfera e aumentando l’attrito). Possono inoltre verificarsi interferenze nelle comunicazioni: i brillamenti solari di classe X, con il loro intenso flusso di raggi X e UV, possono ionizzare a tal punto gli strati atmosferici da causare blackout radio sulle onde corte e disturbi nei sistemi di navigazione GPS (tipicamente di durata da minuti a poche ore). Ad esempio, nel dicembre 2005 un potente flare X emanò un improvviso impulso di raggi X che bloccò per circa 10 minuti le comunicazioni radio e i segnali GPS in ampie zone soleggiate della Terra.</p> 
+
+<p>Il meteo spaziale generato dall’attività solare estrema può dunque avere impatti concreti sulla tecnologia moderna. Le agenzie spaziali e i servizi meteorologici spaziali (come l’Americano NOAA Space Weather Prediction Center) monitorano costantemente il Sole per prevedere questi eventi. In caso di allerta per un’espulsione coronale diretta verso la Terra, si possono attuare misure preventive: ad esempio spegnere temporaneamente sistemi sensibili dei satelliti, riconfigurare le reti elettriche per gestire sovraccarichi, o avvisare gli astronauti sulla ISS di rifugiarsi in sezioni schermate della stazione. Fortunatamente, la magnetosfera terrestre funge da scudo per molte di queste minacce, e gli effetti più gravi sono rari. Tuttavia, eventi eccezionalmente intensi (come il già citato Evento di Carrington del 1859) ci ricordano che il Sole, per quanto distante, può influenzare in modo significativo il nostro ambiente tecnologico. La ricerca in eliogeofisica continua a migliorare la nostra capacità di previsione e mitigazione di tali eventi, rendendo lo spazio circumterrestre più sicuro per satelliti, astronauti e infrastrutture critiche sulla Terra.</p>
+
+<h2>Missioni scientifiche dedicate allo studio del Sole</h2>
+
+<p>Negli ultimi decenni, diverse missioni spaziali hanno rivoluzionato la nostra comprensione del Sole, osservandolo continuativamente da posizioni privilegiate e con strumenti all’avanguardia. Ecco le principali missioni solari e i loro contributi più importanti:
+SOHO (Solar and Heliospheric Observatory, 1995) – Missione congiunta ESA/NASA, posizionata in orbita intorno al punto L1 (tra Terra e Sole) per un monitoraggio continuo. SOHO ha rivoluzionato l’eliosismologia: ha fornito le prime immagini in assoluto della zona convettiva di una stella (sondando l’interno solare) e della struttura delle macchie solari sotto la superficie. Ha misurato con grande precisione la struttura termica, la rotazione interna e i flussi di plasma nell’interno del Sole, confermando ad esempio che il nucleo e la zona radiativa ruotano quasi come un corpo solido. SOHO ha anche misurato l’accelerazione del vento solare, identificando le aree di origine del vento solare veloce nei buchi coronali polari e i meccanismi di accelerazione in gioco.</p> 
+
+<p>Ha scoperto nuovi fenomeni dinamici nella corona, come onde coronali in espansione dopo brillamenti e “tornado” solari (getti vorticosi di plasma magnetizzato). Fondamentale per il space weather, SOHO fornisce monitoraggio in tempo reale di brillamenti e CME e permette fino a 3 giorni di preavviso per le espulsioni di massa coronale dirette verso la Terra. Infine, curiosamente, SOHO è diventato il più prolifico scopritore di comete nella storia dell’astronomia: grazie alle immagini del suo coronografo LASCO, ha individuato oltre 4000 comete radenti il Sole finora (in gran parte scoperte da cittadini scienziati che analizzano i suoi dati).SDO (Solar Dynamics Observatory, 2010) – Satellite NASA in orbita geosincrona intorno alla Terra, progettato per osservare costantemente il Sole ad alta risoluzione e in molte lunghezze d’onda simultaneamente. SDO invia immagini della fotosfera e della corona solare con dettaglio senza precedenti (0,6 arcsec/pixel) ogni 0,75 secondi, permettendo di vedere l’evoluzione dei fenomeni solari in tempo reale. I suoi strumenti includono telescopi ultravioletti (AIA) e un eliosismografo/magnetografo (HMI).</p> 
+
+<p>Grazie a SDO, gli scienziati hanno ottenuto una comprensione molto più approfondita del campo magnetico solare e del meccanismo del ciclo undecennale: i dati di SDO hanno aiutato a prevedere meglio quando un ciclo solare sta terminando e quando il successivo sta per iniziare. La sonda ha anche rivelato nuovi tipi di attività sulla superficie solare, come micro-brillamenti esplosivi e giganteschi “tornado” di plasma che ruotano a velocità di centinaia di migliaia di km/h. Nei suoi primi dieci anni, SDO ha raccolto oltre 350 milioni di immagini del Sole, producendo un flusso di dati di decine di terabyte e offrendo una panoramica completa di un intero ciclo solare. Queste osservazioni hanno permesso scoperte come: l’identificazione di una seconda fase ritardata in alcuni brillamenti (“late phase” flares), la mappatura dettagliata dei flussi meridionali all’interno del Sole legati al ciclo delle macchie, l’osservazione di “onde tsunami” che si propagano sulla superficie solare dopo grandi eruzioni, e molto altro. SDO, ancora operativa e prevista in attività almeno fino al 2030, è diventata un pilastro nell’osservazione solare, fornendo dati fondamentali sia per la ricerca di base sulla fisica solare, sia per il monitoraggio operativo del meteo spaziale terrestre.</p>
+
+<p>Parker Solar Probe (2018) – Ambiziosa missione NASA progettata per avvicinarsi al Sole più di qualsiasi sonda precedente, al fine di “toccare” da vicino la corona e studiarne i misteri. La Parker Solar Probe sta effettuando orbite sempre più strette attorno al Sole grazie a ripetuti assist gravitazionali con Venere; già nel 2021 è diventata il primo veicolo a immergersi nella corona solare, attraversando la cosiddetta superficie di Alfven (confine dell’atmosfera solare) a circa 8,5 milioni di km dalla fotosfera. In quell’occasione la sonda ha direttamente campionato il plasma coronale in loco, misurando caratteristiche mai osservate così vicino alla nostra stella. Entro la fine della missione (2025), Parker Solar Probe raggiungerà una distanza di appena 3,83 milioni di miglia (circa 6 milioni di km) dalla superficie solare – circa 9-10 raggi solari – sfrecciando a oltre 700.000 km/h, il che ne fa anche l’oggetto più veloce mai costruito dall’uomo.</p>
+
+<p>Tra i risultati scientifici già ottenuti vi è la scoperta di frequenti e improvvisi “switchbacks” nel campo magnetico del vento solare: vicino al Sole, Parker ha rilevato che le linee di campo magnetico possono piegarsi e invertirsi bruscamente a formare strutture a zig-zag. Questi switchbacks (ipotizzati in passato ma mai misurati così chiaramente) indicano la presenza di getti di plasma e potrebbero spiegare come il vento solare venga accelerato e riscaldato nelle sue fasi iniziali. La sonda ha inoltre rilevato una riduzione della densità di polvere nelle vicinanze del Sole (confermando l’esistenza di una zona priva di polveri attorno a ~4 milioni di km dal Sole, dove i grani vengono vaporizzati). Parker Solar Probe sta misurando direttamente le condizioni dei campi elettrici e magnetici, delle onde di plasma e delle particelle nella corona, fornendo dati chiave per risolvere due grandi enigmi della fisica solare: perché la corona è così calda (milioni di gradi) rispetto alla superficie e come il vento solare viene accelerato.</p>
+
+<p>I dati raccolti, in sinergia con osservazioni da altre missioni, promettono di far luce su questi processi nei prossimi anni della missione. Solar Orbiter (2020) – Missione ESA con partecipazione NASA, concepita per studiare il Sole da vicino e da prospettive inedite. Solar Orbiter ha un’orbita fortemente inclinata rispetto all’eclittica: con una serie di manovre, nei prossimi anni raggiungerà inclinazioni fino a ~33°, permettendoci per la prima volta di osservare direttamente le regioni polari del Sole con una telecamera. I poli solari sono di grande interesse perché il campo magnetico solare vi emerge e vi converge durante il ciclo undecennale, e finora erano stati esplorati solo indirettamente (dalla sonda Ulysses, che però non aveva fotocamere).</p>
+
+<p>Solar Orbiter è dotata di 10 strumenti scientifici: 6 telescopi da remoto che osservano il Sole in varie bande (luce visibile, ultravioletto, raggi X) e 4 strumenti in situ che misurano particelle e campi nel suo intorno. Questa configurazione mista consente di collegare ciò che accade sulla superficie solare con ciò che viene misurato nel vento solare circostante la sonda, per identificare le regioni di origine delle varie strutture solari. Già durante il suo primo perielio (a ~77 milioni di km, metà della distanza Terra-Sole) Solar Orbiter ha scattato le immagini più ravvicinate di sempre del Sole, rivelando la presenza di numerosissimi micro-brillamenti sulla corona denominati affettuosamente “campfire” (fuocherelli). Questi mini-flare, milioni o miliardi di volte più piccoli dei normali brillamenti, punteggiano l’intera superficie solare attiva e non erano mai stati osservati in dettaglio prima. Si ipotizza che possano contribuire in modo collettivo al misterioso riscaldamento della corona solare.</p>
+
+<p>Solar Orbiter ha anche fornito immagini ad alta risoluzione della superficie e della corona, e magnetogrammi di zone non visibili dalla Terra (ha misurato per la prima volta direttamente il campo magnetico sul lato nascosto del Sole durante la fase di minimo solare). Nel 2022, collaborando con Parker Solar Probe, Solar Orbiter è riuscita a individuare nell’atmosfera solare la probabile origine dei switchbacks magnetici rilevati da Parker (osservando dalla sua prospettiva getti di plasma con forma a S rovesciata). La missione sta dunque gettando nuova luce sulle connessioni Sole-Eliosfera, e nei prossimi anni – man mano che la sua orbita la porterà più vicina al Sole e sopra i poli – ci si aspettano scoperte ancor più notevoli. Solar Orbiter fornirà le prime immagini in assoluto dei poli solari, informazioni cruciali per capire come si genera e si inverte il campo magnetico ogni 11 anni. La missione è prevista durare fino alla fine degli anni 2020 e sta aprendo una nuova finestra di osservazione sul nostro “vicino” stellare.</p>
+
+<h2>Strumenti e tecnologie per l’osservazione solare</h2>
+
+<p>Lo studio del Sole richiede strumenti specializzati, sia da Terra che dallo spazio, a causa dell’intensa luminosità e delle particolari caratteristiche della nostra stella. Di seguito, alcune delle principali tecnologie e metodologie utilizzate in astronomia solare:</p>
+
+<p>Telescopi solari terrestri: sono telescopi ottici progettati specificamente per osservare il Sole con alta risoluzione. Devono affrontare la forte brillantezza solare e il riscaldamento, per cui utilizzano specchi e filtri speciali (ad esempio filtri in banda H-α per vedere cromosfera e protuberanze, o filtri Ca II K, ecc.) e spesso disegn di torre per ridurre l’effetto del seeing. I telescopi solari a terra più moderni sono dotati di ottiche adattive avanzate, che correggono in tempo reale la turbolenza atmosferica, permettendo di ottenere immagini nitide del Sole. Un esempio all’avanguardia è il Daniel K.</p>
+
+<p>Inouye Solar Telescope (DKIST) delle Hawaii, con uno specchio di 4 metri (il più grande del mondo per il Sole). Entrato in funzione nel 2020, DKIST ha già prodotto immagini della fotosfera con dettagli mai visti: strutture magnetiche larghe appena 20-30 km sono state risolte, e l’immagine di una macchia solare ottenuta ha una risoluzione spaziale 2,5 volte superiore a ogni precedente, rivelando intricati dettagli della penombra. Altri importanti telescopi solari a terra includono il Gregory Solar Telescope (GREGOR) da 1,5 m alle Canarie e il McMath-Pierce (ora sostituito) da 1,6 m in Arizona. Questi strumenti, assieme a una rete mondiale di osservatori solari più piccoli, permettono di seguire 24 ore su 24 fenomeni come macchie e flares, e studiare il campo magnetico solare tramite tecniche di spettroscopia polarimetrica ad alta risoluzione.</p>
+
+<p>Osservatori solari nello spazio: portare i telescopi fuori dall’atmosfera ha enormi vantaggi per l’astronomia solare. Innanzitutto si possono osservare senza ostacoli le lunghezze d’onda bloccate dall’atmosfera terrestre – ultravioletto estremo, raggi X e gamma – in cui la corona solare risplende a milioni di gradi. Inoltre, dallo spazio il seeing è perfetto e si può puntare il Sole in continuità (alcune orbite consentono osservazione 24h/24h, senza l’intermittenza del ciclo giorno-notte). Numerose missioni hanno sfruttato questi vantaggi: ad esempio la serie di satelliti GOES/SXI monitora il Sole nei raggi X soffici per allertare dei brillamenti; il telescopio Yohkoh (Giappone/USA) negli anni ‘90 ha ottenuto le prime immagini ai raggi X della corona mostrando le strutture delle linee magnetiche; la missione Hinode (JAXA/NASA, 2006) combina telescopi ottici, EUV e X per studiare l’evoluzione fine delle macchie e dei flares; più recentemente i satelliti IRIS (NASA, 2013) e SDO hanno fornito immagini e spettri ultra-dettagliati rispettivamente della cromosfera e di tutti gli strati solari, con elevata risoluzione temporale.</p> 
+
+<p>Strumenti su questi osservatori spaziali – come i coronografi – riescono a bloccare il disco solare e osservare direttamente la corona e le CME che si allontanano dal Sole, cosa difficilissima da Terra (se non durante brevi eclissi). Un coronografo particolarmente fruttuoso è LASCO a bordo di SOHO, che da oltre 25 anni fotografa continuamente la corona estesa e ha permesso di catalogare migliaia di espulsioni di massa coronale.</p> 
+
+<p>I dati da satelliti come SOHO, SDO, STEREO, PROBA-2, ecc., oltre a essere fondamentali per la ricerca (heliophysics), vengono usati quotidianamente per il monitoraggio operativo del Sole e per prevenire gli effetti del meteo spaziale sul nostro pianeta. Eliosismologia: trattandosi di una stella, il Sole non può essere “ispezionato” direttamente al suo interno, ma la natura ha fornito un potente strumento per scandagliarlo: le oscillazioni proprie del Sole. Analogamente ai sismi terrestri, la superficie solare vibra continuamente per effetto di onde acustiche generate nelle profondità e intrappolate all’interno (onde p-mode). Queste oscillazioni causano piccoli movimenti periodici della fotosfera (dell’ordine di pochi centinaia di metri al secondo) che possono essere misurati attraverso l’effetto Doppler.</p> 
+
+<p>L’analisi delle frequenze di risonanza rilevate – la disciplina chiamata eliosismologia – permette di ricostruire la stratificazione interna del Sole e i moti in profondità. Proprio l’eliosismologia (grazie allo strumento MDI su SOHO e successivamente HMI su SDO, oltre che alla rete terrestre GONG dell’NSO) ha consentito scoperte cruciali: ad esempio ha rivelato l’andamento della rotazione interna del Sole (solidale nel nucleo e zona radiativa, differenziale nella zona convettiva) e individuato la tachocline – lo strato di transizione sottile tra zona radiativa e convettiva, sede probabile della dinamo solare. Ha anche permesso di misurare con precisione il profilo di temperatura e densità all’interno del Sole, confermando i modelli standard di struttura stellare. Inoltre, monitorando le variazioni eliosismiche nel tempo, si è osservato come la propagazione delle onde acustiche nel Sole cambi leggermente con il ciclo solare (ad esempio a causa dei campi magnetici ciclici) fornendo un ulteriore strumento di indagine del magnetismo solare profondo. In sintesi, l’eliosismologia è paragonabile a un’“ecografia” del Sole e continua a fornire dati importantissimi per comprendere i processi interni della nostra stella.</p>
+
+<p>Coronografi ed eclissi solari: uno degli aspetti più affascinanti (e impegnativi) dell’osservazione solare è studiare la corona, la tenue atmosfera esterna che circonda il Sole. In condizioni normali la corona è offuscata dalla luce intensa della fotosfera (milioni di volte più luminosa); tuttavia, durante una eclisse totale di Sole la Luna copre perfettamente il disco solare rivelando per pochi minuti la visione mozzafiato della corona bianca e filamentosa. Prima dell’era spaziale, le eclissi erano l’unico modo per studiare la corona: celebri sono le fotografie coronali ottenute nelle eclissi di fine ’800 che mostrarono per la prima volta le strutture a raggi (streamers) del campo magnetico coronale, e permisero addirittura la scoperta di un elemento chimico nuovo (il coronio, poi identificato come ferro altamente ionizzato).</p> 
+
+<p>Oggi, per osservare la corona in modo continuativo, gli astronomi utilizzano i coronografi, strumenti che creano un’eclisse artificiale tramite un dischetto occultatore che blocca la fotosfera. I coronografi sono installati sia su telescopi a terra (ad esempio al Sacramento Peak Observatory) sia soprattutto a bordo di satelliti (LASCO di SOHO, COR-1 e 2 su STEREO, Metis su Solar Orbiter, ecc.), e permettono di monitorare costantemente le espulsioni di massa coronale e la struttura del vento solare vicino al Sole. Grazie a queste tecnologie, la coronografia è diventata parte integrante del monitoraggio solare continuo, fondamentale sia per la ricerca (studio della fisica coronale ad alta temperatura) sia per applicazioni pratiche legate al meteo spaziale.</p>
+
+<p>In conclusione, l’astronomia solare ha compiuto enormi passi avanti grazie all’integrazione di osservazioni da Terra e dallo spazio, all’impiego di nuovi strumenti e tecniche (dalle ottiche adattive alla spettroscopia ad altissima risoluzione, fino alle sonde che “toccheranno” il Sole). Il Sole, pur essendo una stella comune nell’immensità della galassia, rimane il laboratorio naturale più accessibile per studiare i processi astrofisici in condizioni estreme. Comprenderne struttura, dinamiche interne, ciclo magnetico e influenza sullo spazio circumterrestre non è solo di importanza accademica, ma ha ricadute pratiche dirette per la nostra società tecnologica. Le missioni in corso (come Parker Solar Probe e Solar Orbiter) e i nuovi progetti (ad esempio telescopi come il futuro EST europeo) promettono di svelare ulteriormente i segreti della nostra stella, continuando la secolare meraviglia e curiosità che il Sole suscita negli osservatori di ogni epoca.</p>
+  <footer>
+    &copy; Blog di Arthur Veo – Spazio1999
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+  </script>
+
+</body>
+</html>
