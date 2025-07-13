@@ -156,11 +156,12 @@ mark {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+
+ @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: transparent !important;
+    background-color: transparent;
     position: absolute;
     top: 50px;
     left: 0;
@@ -169,13 +170,14 @@ mark {
     gap: 0;
   }
 
+  nav ul.show {
+    display: flex;
+    background-color: navy;
+  }
+
   nav ul li {
     border-top: 1px solid gold;
     padding: 10px 0;
-  }
-
-  nav ul.show {
-    display: flex;
   }
 
   .menu-toggle {
@@ -244,6 +246,7 @@ mark {
   </script>
 
   <h1><b>Astronomia Osservativa</b></h1>
+
   <h2><mark><b>Introduzione</b></mark></h2>
 
   <img src="astrooss.jpg" alt="Astronomia osservativa" class="intro-img">
