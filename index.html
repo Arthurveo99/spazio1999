@@ -121,37 +121,33 @@
     }
 
     /* ─── HERO ─── */
-    .hero {
+    .page-hero {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 80px 24px 50px;
-      max-width: 1200px;
+      padding: 70px 24px 40px;
+      max-width: 900px;
       margin: 0 auto;
       animation: fadeUp 0.8s ease both;
     }
 
     .hero-eyebrow {
-    text-align: center;       /* centra orizzontalmente il testo */
-    width: 100%;              /* occupa tutta la larghezza possibile */
-    padding: 12px 0;          /* un po' di spazio sopra e sotto */
-    box-sizing: border-box;   /* evita che padding "rompa" larghezza */
-    margin: 0 auto;           /* centra il contenitore stesso */
-    display: block;           /* assicurati che sia un blocco */
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 14px;
     }
 
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 900;
       color: var(--gold-light);
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      line-height: 1.15;
-      text-shadow: 0 0 50px rgba(212, 175, 55, 0.25);
-      background: none;
-      padding: 0;
-      border-radius: 0;
+      text-shadow: 0 0 50px rgba(212,175,55,0.2);
       margin-bottom: 10px;
     }
 
@@ -159,7 +155,7 @@
       width: 80px;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 18px auto 36px;
+      margin: 16px auto 36px;
     }
 
     /* ─── DROPDOWN COSTELLAZIONI ─── */
