@@ -132,12 +132,12 @@
     }
 
     .hero-eyebrow {
-      font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      margin-bottom: 16px;
+    text-align: center;       /* centra orizzontalmente il testo */
+    width: 100%;              /* occupa tutta la larghezza possibile */
+    padding: 12px 0;          /* un po' di spazio sopra e sotto */
+    box-sizing: border-box;   /* evita che padding "rompa" larghezza */
+    margin: 0 auto;           /* centra il contenitore stesso */
+    display: block;           /* assicurati che sia un blocco */
     }
 
     h1 {
@@ -430,13 +430,14 @@
       </ul>
     </div>
   </nav>
-
+  
 <!-- ═══ HERO ═══ -->
-  <header class="page-hero">
-    <p class="hero-eyebrow">✦ Benvenuto nel Blog ✦</p>
-    <h1>Astronomia Osservativa</h1>
+  <header class="hero">
+    <p class="hero-eyebrow">✦ Benvenuto nel blog ✦</p>
+    <h1>Cos'è l'Astronomia?</h1>
     <div class="divider"></div>
   </header>
+
 
   <!-- ═══ DROPDOWN ═══ -->
   <div class="dropdown-wrap">
