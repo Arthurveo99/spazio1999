@@ -1,243 +1,449 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spazio1999-Astrofisica</title>
+  <title>Spazio1999 - Astrofisica</title>
   <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F5E27A;
+      --gold-dim: #8B6914;
+      --navy: #050d1a;
+      --navy-card: rgba(8, 20, 45, 0.82);
+      --border: rgba(212, 175, 55, 0.28);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Crimson Text', Georgia, serif;
       background: url('milkyway.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: var(--gold);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(5,13,26,0.78) 0%,
+        rgba(5,13,26,0.48) 40%,
+        rgba(5,13,26,0.65) 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ─── NAVBAR ─── */
     nav {
-      background-color: rgba(0, 0, 50, 0.85);
-      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(5, 13, 26, 0.93);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 36px;
+      height: 60px;
+    }
+
+    .nav-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      list-style: none;
       display: flex;
-      justify-content: center;
+      gap: 4px;
       flex-wrap: wrap;
-      gap: 20px;
+      justify-content: center;
     }
 
     nav ul li a {
-      color: gold;
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(212, 175, 55, 0.7);
       text-decoration: none;
-      font-size: 1.1rem;
-      padding: 8px 16px;
-      transition: background-color 0.3s;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      transition: color 0.2s, background 0.2s;
     }
 
     nav ul li a:hover {
-      background-color: gold;
-      color: black;
-      border-radius: 8px;
+      color: var(--navy);
+      background: var(--gold);
     }
- nav ul li a {
-        font-size: 1rem;
-      }
 
+    .hamburger {
+      display: none;
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      color: var(--gold);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ─── HERO ─── */
+    .page-hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 24px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 14px;
+    }
 
     h1 {
-      background-color: darkslateblue;
-      color: white;
-      font-size: 2.5rem;
-      text-align: center;
-      margin: 30px auto 20px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      max-width: 600px;
-    }
-
-    h2 {
-      background-color: darkslateblue;
-      color: gold;
-      font-size: 1.5rem;
-      text-align: center;
-      margin: 40px auto 20px;
-      padding: 10px;
-      border-radius: 10px;
-      max-width: 600px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 20px;
-      text-align: justify;
-    }
-
-    ul {
-      font-size: 1.1rem;
-      margin: 20px 40px;
-      line-height: 1.6;
-    }
-
-    li {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--gold-light);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-shadow: 0 0 50px rgba(212,175,55,0.2);
       margin-bottom: 10px;
     }
 
-    mark {
-      background-color: darkslateblue;
-      color: gold;
-      padding: 2px 4px;
-      border-radius: 3px;
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 16px auto 36px;
     }
 
-    a {
-      color: gold;
-      text-decoration: none;
+    /* ─── CONTENUTO ─── */
+    .content-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    /* Immagine intro */
+    .intro-img-wrap {
+      text-align: center;
+      margin-bottom: 32px;
     }
 
-    img {
-      display: block;
-      margin: 30px auto;
-      max-width: 90%;
+    .intro-img-wrap img {
+      width: 100%;
+      max-width: 480px;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
     }
 
-     .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
+    /* Paragrafi */
+    .text-card {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: rgba(245,226,122,0.88);
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 26px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+      margin-bottom: 16px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    /* Titoli sezione */
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: normal;
+      color: var(--gold-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 40px 0 20px;
       background: none;
-      border: none;
-      color: gold;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      z-index: 1100;
-      cursor: pointer;
+      padding: 0;
+      border-radius: 0;
     }
 
+    h2::before, h2::after {
+      content: ' ✦ ';
+      color: var(--gold-dim);
+    }
 
+    /* Lista rami */
+    .rami-list {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 8px 0;
+      margin-bottom: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .ramo-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(212,175,55,0.08);
+      transition: background 0.2s;
+    }
+
+    .ramo-item:last-child { border-bottom: none; }
+    .ramo-item:hover { background: rgba(212,175,55,0.05); }
+
+    .ramo-item a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      white-space: nowrap;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      padding: 4px 12px;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .ramo-item a:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .ramo-desc {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: rgba(245,226,122,0.78);
+    }
+
+    /* Highlight materia/energia oscura */
+    .highlight-gold {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* Back button */
+    .back-button {
+      text-align: center;
+      margin: 20px 0 40px;
+    }
+
+    .back-button a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 3px;
+      transition: filter 0.2s;
+    }
+
+    .back-button a:hover { filter: brightness(1.15); }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-dim);
+    }
+
+    /* Animazioni */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile */
     @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(0, 0, 50, 0.95);
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    gap: 0;
-  }
+      .hamburger { display: block; }
+      .nav-inner { padding: 0 20px; }
 
-  nav ul li {
-    border-top: 1px solid gold;
-    padding: 10px 0;
-  }
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: rgba(5,13,26,0.97);
+        border-top: 1px solid var(--border);
+        gap: 0;
+      }
 
-  nav ul.show {
-    display: flex;
-  }
+      #nav-menu.active { display: flex; }
 
-  .menu-toggle {
-    display: block;
-    left: 20px;
-    right: auto;
-  }
+      nav ul li { width: 100%; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      nav ul li a { display: block; padding: 14px; border-radius: 0; border: none; }
 
-  nav {
-    position: relative;
-    padding: 10px 20px;
-  }
-}
-
+      .ramo-item { flex-direction: column; gap: 8px; }
+    }
   </style>
 </head>
 
 <body>
 
-<nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul id="menu">
-      <li><a href="index.html">Home Blog</a></li>
-      <li><a href="astrooss.html">A. Osservativa</a></li>
-      <li><a href="astrofisica.html">Astrofisica</a></li>
-      <li><a href="cosmologia.html">Cosmologia</a></li>
-      <li><a href="planetologia.html">A. Planetaria</a></li>
-      <li><a href="astrosolare.html">A. Solare</a></li>
-      <li><a href="astronews.html">News</a></li>
-    </ul>
+  <!-- ═══ NAVBAR ═══ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">✦ Spazio1999</a>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="astrooss.html">A. Osservativa</a></li>
+        <li><a href="astrofisica.html">Astrofisica</a></li>
+        <li><a href="cosmologia.html">Cosmologia</a></li>
+        <li><a href="planetologia.html">A. Planetaria</a></li>
+        <li><a href="astrosolare.html">A. Solare</a></li>
+      </ul>
+    </div>
   </nav>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-</script>
+  <!-- ═══ HERO ═══ -->
+  <header class="page-hero">
+    <p class="hero-eyebrow">✦ Spazio1999 — Blog ✦</p>
+    <h1>Astrofisica</h1>
+    <div class="divider"></div>
+  </header>
 
+  <!-- ═══ CONTENUTO ═══ -->
+  <div class="content-wrap">
 
+    <div class="intro-img-wrap">
+      <img src="astrofisica.jpg" alt="Astrofisica - illustrazione concettuale">
+    </div>
 
-  <h1>Astrofisica</h1>
+    <p class="text-card">
+      L'astrofisica è la scienza che studia l'universo applicando i principi della fisica e della chimica agli oggetti celesti e ai fenomeni cosmici.
+      A differenza dell'astronomia osservativa che si occupa della raccolta di dati, l'astrofisica li interpreta, cercando di capire il <em>perché</em>
+      delle cose: perché le stelle brillano? Come si formano i buchi neri? Da dove nasce la materia dell'universo?
+    </p>
 
-<img src="astrofisica.jpg" alt="Astrofisica - illustrazione concettuale" style="display: block; margin: 30px auto;
- max-width: 500px; width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+    <h2>Obiettivi dell'Astrofisica</h2>
 
-  <p><b>
-    L'astrofisica è la scienza che studia l’universo applicando i principi della fisica e della chimica agli oggetti celesti e ai fenomeni cosmici.
-    A differenza dell'astronomia osservativa che si occupa della raccolta di dati, l’astrofisica li interpreta, cercando di capire il perché
-    delle cose: perché le stelle brillano? Come si formano i buchi neri? Da dove nasce la materia dell’universo?
-  </b></p>
+    <p class="text-card">
+      L'obiettivo dell'astrofisica è comprendere la natura e il comportamento degli oggetti celesti attraverso le leggi della fisica.
+      Gli astrofisici combinano dati osservativi con modelli matematici e simulazioni per descrivere processi fondamentali come la nucleosintesi,
+      l'interazione gravitazionale e l'emissione di energia nelle diverse frequenze dello spettro elettromagnetico.
+    </p>
 
-  <h2><b>Obiettivi dell'Astrofisica</b></h2>
+    <div class="rami-list">
+      <div class="ramo-item">
+        <a href="astrofstar.html">Astrofisica Stellare</a>
+        <span class="ramo-desc">Studia il ciclo vitale delle stelle, dai processi di formazione (protostelle) alla morte come nane bianche, stelle di neutroni o buchi neri.</span>
+      </div>
+      <div class="ramo-item">
+        <a href="astrofgal.html">Astrofisica Galattica</a>
+        <span class="ramo-desc">Analizza la struttura, la dinamica e l'evoluzione delle galassie, e i fenomeni legati alla <em>materia oscura</em>.</span>
+      </div>
+      <div class="ramo-item">
+        <a href="astrofaltener.html">Alte Energie</a>
+        <span class="ramo-desc">Si occupa di fenomeni estremi: buchi neri, raggi cosmici, esplosioni di supernova, e getti relativistici.</span>
+      </div>
+      <div class="ramo-item">
+        <a href="blackhole.html">Buchi Neri</a>
+        <span class="ramo-desc">Esamina la fisica dei dischi di accrescimento, dei getti e delle emissioni X provenienti dai buchi neri.</span>
+      </div>
+    </div>
 
-  <p><b>
-    L'obiettivo dell'astrofisica è comprendere la natura e il comportamento degli oggetti celesti attraverso le leggi della fisica.
-    Gli astrofisici combinano dati osservativi con modelli matematici e simulazioni per descrivere processi fondamentali come la nucleosintesi,
-    l’interazione gravitazionale e l’emissione di energia nelle diverse frequenze dello spettro elettromagnetico.
-  </b></p>
+    <h2>Materia ed Energia Oscura</h2>
 
-  <ul>
-    <li><b><mark><a href="astrofstar.html">Astrofisica Stellare</a></mark></b> — Studia il ciclo vitale delle stelle, dai processi di formazione (protostelle) alla morte come nane bianche, stelle di neutroni o buchi neri.</li>
-    <li><b><mark><a href="astrofgal.html">Astrofisica Galattica</a></mark></b> — Analizza la struttura, la dinamica e l’evoluzione delle galassie, e i fenomeni legati alla <i>materia oscura</i>.</li>
-    <li><b><mark><a href="astrofaltener.html">Astrofisica delle Alte Energie</a></mark></b> — Si occupa di fenomeni estremi: buchi neri, raggi cosmici, esplosioni di supernova, e getti relativistici.</li>
-    <li><b><mark><a href="blackhole.html">Buchi Neri e materia circostante</a></mark></b> — Esamina la fisica dei dischi di accrescimento, dei getti e delle emissioni X provenienti dai buchi neri.</li>
-  </ul>
+    <p class="text-card">
+      Due delle più grandi sfide dell'astrofisica moderna sono la <span class="highlight-gold">Materia Oscura</span> e
+      l'<span class="highlight-gold">Energia Oscura</span>. Entrambe invisibili, costituiscono circa il 95% del contenuto dell'universo,
+      ma la loro vera natura è ancora sconosciuta.
+    </p>
 
-  <h2><b>Misteri Cosmici: Materia ed Energia Oscura</b></h2>
+    <p class="text-card">
+      La <em>materia oscura</em> non emette né assorbe luce, ma esercita un'influenza gravitazionale osservabile, ad esempio nella rotazione delle galassie:
+      le stelle ai margini si muovono troppo velocemente per la sola massa visibile. Questo suggerisce l'esistenza di un alone invisibile di materia.
+    </p>
 
-  <p><b>
-    Due delle più grandi sfide dell’astrofisica moderna sono la <span style="color:gold; background-color:black;">Materia Oscura</span> e
-    l’<span style="background-color:black; color:gold;">Energia Oscura</span>. Entrambe invisibili, costituiscono circa il 95% del contenuto dell'universo,
-    ma la loro vera natura è ancora sconosciuta.
-  </b></p>
+    <p class="text-card">
+      L'<em>energia oscura</em> è responsabile dell'accelerazione dell'espansione dell'universo. Lo si è scoperto osservando le supernovae di tipo Ia e misurando il Redshift
+      delle galassie: più sono lontane, più si allontanano velocemente. L'universo non solo si espande, ma lo fa in modo sempre più rapido.
+    </p>
 
-  <p><b>
-    La <i>materia oscura</i> non emette né assorbe luce, ma esercita un’influenza gravitazionale osservabile, ad esempio nella rotazione delle galassie:
-    le stelle ai margini si muovono troppo velocemente per la sola massa visibile. Questo suggerisce l’esistenza di un alone invisibile di materia.
-  </b></p>
+    <p class="text-card">
+      Secondo il modello cosmologico <span class="highlight-gold">ΛCDM</span> (Lambda-Cold Dark Matter), il contenuto dell'universo è composto
+      per il 5% da materia ordinaria (barionica), per il 27% da materia oscura e per il 68% da energia oscura.
+    </p>
 
-  <p><b>
-    L’<i>energia oscura</i>, invece, è responsabile dell’accelerazione dell’espansione dell’universo. Lo si è scoperto osservando le supernovae di tipo Ia e misurando il Redshift
-    delle galassie: più sono lontane, più si allontanano velocemente. Questo comporta che l’universo non solo si espande, ma lo fa in modo sempre più rapido.
-  </b></p>
+    <div class="back-button">
+      <a href="index.html">← Torna al Blog</a>
+    </div>
 
-  <p><b>
-    Secondo il modello cosmologico ΛCDM (Lambda-Cold Dark Matter), il contenuto dell’universo è composto per il 5% da materia ordinaria (barionica),
-    per il 27% da materia oscura e per il 68% da energia oscura.
-  </b></p>
+  </div>
+
+  <footer>&copy; Blog di Arthur Veo &nbsp;✦&nbsp; Spazio1999</footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' ||
+          (e.ctrlKey && e.key === 'u') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'J')) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+  </script>
 
 </body>
 </html>
