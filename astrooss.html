@@ -1,373 +1,548 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spazio1999 - Astronomia Osservativa</title>
   <link rel="shortcut icon" href="cometa.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
   <style>
-   body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: url('milkyway.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  overflow-x: hidden;
-}
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F5E27A;
+      --gold-dim: #8B6914;
+      --navy: #050d1a;
+      --navy-card: rgba(8, 20, 45, 0.82);
+      --border: rgba(212, 175, 55, 0.28);
+    }
 
-.wrapper {
-  max-width: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 5px;
-}
-nav {
-  background-color: rgba(0, 0, 50, 0.85);
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    body {
+      font-family: 'Crimson Text', Georgia, serif;
+      background: url('milkyway.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--gold);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-nav ul li a {
-  color: gold;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 8px 16px;
-  transition: background-color 0.3s;
-}
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(5,13,26,0.78) 0%,
+        rgba(5,13,26,0.48) 40%,
+        rgba(5,13,26,0.65) 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
 
-nav ul li a:hover {
-  background-color: gold;
-  color: black;
-  border-radius: 8px;
-}
+    /* ─── NAVBAR ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 13, 26, 0.93);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
 
-h1 {
-  background-color: darkslateblue;
-  color: white;
-  font-size: 2.2rem;
-  font-style: italic;
-  text-align: center;
-  margin: 30px auto 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  max-width: 700px;
-}
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 36px;
+      height: 60px;
+    }
 
-h2 {
-  font-size: 1.5rem;
-  font-style: italic;
-  text-align: center;
-  color: gold;
-  margin: 30px auto 15px;
-}
+    .nav-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
 
-p {
-  font-size: 1.1rem;
-  font-style: italic;
-  text-align: justify;
-  margin: 15px auto;
-  padding: 0 10px;
-  max-width: 100%;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-}
+    nav ul li a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(212, 175, 55, 0.7);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
 
-.intro-img {
-  margin: 0 auto 20px;
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-}
-mark {
-  background-color: darkslateblue;
-  color: gold;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
+    nav ul li a:hover {
+      color: var(--navy);
+      background: var(--gold);
+    }
 
-.section-block {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 30px 10px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid gold;
-  padding-bottom: 20px;
-}
+    .hamburger {
+      display: none;
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      color: var(--gold);
+      cursor: pointer;
+      padding: 8px;
+    }
 
-.section-block img {
-  width: 160px;
-  flex-shrink: 0;
-}
+    /* ─── HERO ─── */
+    .page-hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 24px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeUp 0.8s ease both;
+    }
 
-.section-block p {
-  flex: 1;
-}
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 14px;
+    }
 
-.back-button {
-  text-align: center;
-  margin: 40px 0;
-}
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      color: var(--gold-light);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-shadow: 0 0 50px rgba(212,175,55,0.2);
+      margin-bottom: 10px;
+    }
 
-.back-button a {
-  background-color: gold;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 16px auto 36px;
+    }
 
-.back-button a:hover {
-  background-color: white;
-}
+    /* ─── INTRO IMG ─── */
+    .intro-img-wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 0 auto 36px;
+    }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: gold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  z-index: 1100;
-  cursor: pointer;
-}
+    .intro-img-wrap img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    }
 
+    /* ─── INTRO TEXT ─── */
+    .intro-text {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
 
- @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: transparent;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    gap: 0;
-  }
+    .intro-text p {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: rgba(245,226,122,0.88);
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 26px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+    }
 
-  nav ul.show {
-    display: flex;
-    background-color: navy;
-  }
+    /* ─── SECTION TITLE ─── */
+    h2 {
+      position: relative;
+      z-index: 1;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: normal;
+      color: var(--gold-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 48px auto 24px;
+    }
 
-  nav ul li {
-    border-top: 1px solid gold;
-    padding: 10px 0;
-  }
+    /* ─── SECTION BLOCKS ─── */
+    .sections-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-  .menu-toggle {
-    display: block;
-    left: 20px;
-    right: auto;
-  }
+    .section-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 20px;
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 22px 24px;
+      backdrop-filter: blur(8px);
+      animation: fadeUp 0.6s ease both;
+      transition: border-color 0.2s;
+    }
 
-  nav {
-    position: relative;
-    padding: 10px 20px;
-  }
+    .section-block:hover {
+      border-color: rgba(212,175,55,0.5);
+    }
 
-  .section-block {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 10px;
-  }
+    .section-block img {
+      width: 150px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      aspect-ratio: 3/2;
+    }
 
-  .section-block img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    margin-bottom: 10px;
-  }
+    .section-block .block-content {
+      flex: 1;
+    }
 
-  .section-block p {
-    width: 95%;
-    max-width: 500px;
-    margin: 10px auto;
-    text-align: left;
-  }
+    .block-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
 
-  p {
-    margin: 15px 10px;
-    padding: 0 5px;
-  }
-}
+    .section-block p {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(245,226,122,0.82);
+      text-align: left;
+    }
 
+    /* ─── STRUMENTI ─── */
+    .strumenti-grid {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
 
+    .strumento-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 18px 20px;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.2s;
+    }
+
+    .strumento-card:hover {
+      border-color: rgba(212,175,55,0.5);
+    }
+
+    .strumento-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .strumento-card p {
+      font-family: 'Crimson Text', serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(245,226,122,0.78);
+    }
+
+    /* ─── BACK BUTTON ─── */
+    .back-button {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 20px 0 60px;
+    }
+
+    .back-button a {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 3px;
+      transition: filter 0.2s;
+    }
+
+    .back-button a:hover { filter: brightness(1.15); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-dim);
+    }
+
+    /* ─── ANIMAZIONI ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      .nav-inner { padding: 0 20px; }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: rgba(5,13,26,0.97);
+        border-top: 1px solid var(--border);
+        gap: 0;
+      }
+
+      #nav-menu.active { display: flex; }
+
+      nav ul li { width: 100%; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      nav ul li a { display: block; padding: 14px; border-radius: 0; border: none; }
+
+      .section-block { flex-direction: column; align-items: center; }
+      .section-block img { width: 100%; max-width: 340px; }
+
+      .strumenti-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
 <body>
-<div class="wrapper">
-  
+
+  <!-- ═══ NAVBAR ═══ -->
   <nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul id="menu">
-      <li><a href="index.html">Home Blog</a></li>
-      <li><a href="astrooss.html">A. Osservativa</a></li>
-      <li><a href="astrofisica.html">Astrofisica</a></li>
-      <li><a href="cosmologia.html">Cosmologia</a></li>
-      <li><a href="planetologia.html">A. Planetaria</a></li>
-      <li><a href="astrosolare.html">A. Solare</a></li>
-      <li><a href="astronews.html">News</a></li>
-    </ul>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">✦ Spazio1999</a>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="astrooss.html">A. Osservativa</a></li>
+        <li><a href="astrofisica.html">Astrofisica</a></li>
+        <li><a href="cosmologia.html">Cosmologia</a></li>
+        <li><a href="planetologia.html">A. Planetaria</a></li>
+        <li><a href="astrosolare.html">A. Solare</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('show');
-    }
-  </script>
+  <!-- ═══ HERO ═══ -->
+  <header class="page-hero">
+    <p class="hero-eyebrow">✦ Spazio1999 — Blog ✦</p>
+    <h1>Astronomia Osservativa</h1>
+    <div class="divider"></div>
+  </header>
 
-  <h1><b>Astronomia Osservativa</b></h1>
+  <!-- ═══ IMMAGINE INTRO ═══ -->
+  <div class="intro-img-wrap">
+    <img src="astrooss.jpg" alt="Astronomia osservativa">
+  </div>
 
-  <h2><mark><b>Introduzione</b></mark></h2>
+  <!-- ═══ TESTO INTRO ═══ -->
+  <div class="intro-text">
+    <p>
+      L'astronomia osservativa è la branca della scienza astronomica che studia il cielo mediante l'analisi dei segnali provenienti dallo spazio,
+      come la luce visibile, le onde radio e le radiazioni ad alta energia. Dalle osservazioni a occhio nudo dell'antichità
+      ai moderni osservatori spaziali, questa disciplina ha trasformato radicalmente la nostra visione dell'universo.
+      <br><br>
+      Ogni tipo di radiazione fornisce informazioni diverse sugli oggetti celesti. Per questo l'astronomia moderna si è specializzata
+      in più settori osservativi, ciascuno con strumenti dedicati, sia da terra che nello spazio.
+    </p>
+  </div>
 
-  <img src="astrooss.jpg" alt="Astronomia osservativa" class="intro-img">
+  <!-- ═══ SEZIONI ═══ -->
+  <h2>✦ Bande di Osservazione ✦</h2>
 
-  <p><b>
-    L'astronomia osservativa è la branca della scienza astronomica che studia il cielo mediante l’analisi dei segnali provenienti dallo spazio,
-    come la luce visibile, le onde radio e le radiazioni ad alta energia. Dalle osservazioni a occhio nudo dell'antichità
-    ai moderni osservatori spaziali, questa disciplina ha trasformato radicalmente la nostra visione dell’universo.
-    <br><br>
-    Ogni tipo di radiazione fornisce informazioni diverse sugli oggetti celesti. Per questo l’astronomia moderna si è specializzata
-    in più settori osservativi, ciascuno con strumenti dedicati, sia da terra che nello spazio.
-  </b></p>
+  <div class="sections-wrap">
 
-  <!-- Sezioni di astronomia osservativa (approfondite) -->
-  <div class="section-block">
-    <img src="radio.jpg" alt="Astronomia Radio">
-    <p><b>
-        <u><mark>Astronomia Radio</mark></u><br>
-        Studia l’universo attraverso le onde radio emesse da oggetti come quasar, pulsar, galassie attive e resti di supernovae.
+    <div class="section-block">
+      <img src="radio.jpg" alt="Astronomia Radio">
+      <div class="block-content">
+        <div class="block-title">Astronomia Radio</div>
+        <p>Studia l'universo attraverso le onde radio emesse da oggetti come quasar, pulsar, galassie attive e resti di supernovae.
         Grazie a enormi radiotelescopi (es. FAST, VLA), è possibile osservare fenomeni invisibili alla luce visibile,
-        come la struttura della Via Lattea o le nubi di idrogeno interstellare.
-    </b></p>
+        come la struttura della Via Lattea o le nubi di idrogeno interstellare.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="microonde.jpg" alt="Astronomia Microonde">
+      <div class="block-content">
+        <div class="block-title">Astronomia Microonde</div>
+        <p>Analizza la Radiazione Cosmica di Fondo (CMB), un residuo dell'universo primordiale. Satelliti come COBE, WMAP e Planck
+        hanno mappato le minuscole variazioni della temperatura cosmica, aiutando a comprendere l'origine e la struttura dell'universo.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="infrarosso.jpg" alt="Astronomia Infrarossa">
+      <div class="block-content">
+        <div class="block-title">Astronomia Infrarossa</div>
+        <p>Permette di osservare oggetti celesti nascosti dalle polveri cosmiche, come stelle in formazione e dischi protoplanetari.
+        Telescopi come Spitzer e James Webb esplorano l'universo in questa banda, rivelando galassie lontane e fredde
+        che non emettono luce visibile.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="visibile.jpg" alt="Astronomia Ottica">
+      <div class="block-content">
+        <div class="block-title">Astronomia Ottica</div>
+        <p>È la forma tradizionale di osservazione astronomica. Utilizza la luce visibile per analizzare stelle, pianeti, galassie e nebulose.
+        I telescopi terrestri e spaziali, come Hubble, hanno permesso scoperte cruciali sulla struttura dell'universo e
+        sull'evoluzione delle stelle.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="ultravioletto.jpg" alt="Astronomia UV">
+      <div class="block-content">
+        <div class="block-title">Astronomia Ultravioletto</div>
+        <p>Indaga stelle giovani e calde, resti di supernovae e regioni ionizzate. La radiazione UV viene assorbita dall'atmosfera,
+        perciò è osservata tramite telescopi spaziali come Hubble e GALEX. Rende possibile lo studio delle fasi più dinamiche della vita stellare.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="raggix.jpg" alt="Astronomia Raggi X">
+      <div class="block-content">
+        <div class="block-title">Astronomia Raggi X</div>
+        <p>Esamina oggetti estremamente energetici come buchi neri, stelle di neutroni e ammassi di galassie.
+        I raggi X non raggiungono la superficie terrestre, quindi vengono osservati con telescopi in orbita come Chandra e XMM-Newton.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <img src="raggigamma.jpg" alt="Astronomia Raggi Gamma">
+      <div class="block-content">
+        <div class="block-title">Astronomia Raggi Gamma</div>
+        <p>È la più energetica tra tutte le bande. Studia lampi gamma, buchi neri in fusione, eventi cosmici estremi.
+        I telescopi Fermi e MAGIC rilevano queste emissioni dallo spazio o da alte quote terrestri.</p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="section-block">
-    <img src="microonde.jpg" alt="Astronomia Microonde">
-    <p><b>
-        <u><mark>Astronomia Microonde</mark></u><br>
-        Analizza la Radiazione Cosmica di Fondo (CMB), un residuo dell'universo primordiale. Satelliti come COBE, WMAP e Planck
-        hanno mappato le minuscole variazioni della temperatura cosmica, aiutando a comprendere l’origine e la struttura dell’universo.
-    </b></p>
+  <!-- ═══ STRUMENTI ═══ -->
+  <h2>✦ Strumenti e Tecnologie ✦</h2>
+
+  <div class="strumenti-grid">
+    <div class="strumento-card">
+      <div class="strumento-title">Telescopi Ottici</div>
+      <p>A rifrazione e riflessione, amplificano la luce visibile. Installati in zone secche e buie, come il deserto di Atacama o le Hawaii.</p>
+    </div>
+    <div class="strumento-card">
+      <div class="strumento-title">Radiotelescopi</div>
+      <p>Enormi parabole che captano onde radio. Operano in gruppo per formare interferometri e ottenere immagini dettagliate.</p>
+    </div>
+    <div class="strumento-card">
+      <div class="strumento-title">Spettroscopi</div>
+      <p>Analizzano la luce in ogni lunghezza d'onda per determinare la composizione, temperatura e velocità degli oggetti celesti.</p>
+    </div>
+    <div class="strumento-card">
+      <div class="strumento-title">CCD</div>
+      <p>Sensori elettronici che catturano immagini astronomiche digitali con alta sensibilità e basso rumore.</p>
+    </div>
+    <div class="strumento-card">
+      <div class="strumento-title">Osservatori Spaziali</div>
+      <p>Telescopi in orbita come Hubble, James Webb, Chandra, Fermi. Rivelano bande di radiazione assorbite dall'atmosfera.</p>
+    </div>
+    <div class="strumento-card">
+      <div class="strumento-title">Interferometri</div>
+      <p>Combinano più antenne o telescopi per aumentare la risoluzione. Essenziali in radioastronomia e osservazioni millimetriche.</p>
+    </div>
   </div>
 
-  <div class="section-block">
-    <img src="infrarosso.jpg" alt="Astronomia Infrarossa">
-    <p><b>
-        <u><mark>Astronomia Infrarossa</mark></u><br>
-        Permette di osservare oggetti celesti nascosti dalle polveri cosmiche, come stelle in formazione e dischi protoplanetari.
-        Telescopi come Spitzer e James Webb esplorano l’universo in questa banda, rivelando galassie lontane e fredde
-        che non emettono luce visibile.
-    </b></p>
-  </div>
-
-  <div class="section-block">
-    <img src="visibile.jpg" alt="Astronomia Ottica">
-    <p><b>
-        <u><mark>Astronomia Ottica</mark></u><br>
-        È la forma tradizionale di osservazione astronomica. Utilizza la luce visibile per analizzare stelle, pianeti, galassie e nebulose.
-        I telescopi terrestri e spaziali, come Hubble, hanno permesso scoperte cruciali sulla struttura dell’universo e
-        sull’evoluzione delle stelle.
-    </b></p>
-  </div>
-
-  <div class="section-block">
-    <img src="ultravioletto.jpg" alt="Astronomia UV">
-    <p><b>
-        <u><mark>Astronomia Ultravioletto</mark></u><br>
-        Indaga stelle giovani e calde, resti di supernovae e regioni ionizzate. La radiazione UV viene assorbita dall’atmosfera,
-        perciò è osservata tramite telescopi spaziali come Hubble e GALEX. Rende possibile lo studio delle fasi più dinamiche della vita stellare.
-    </b></p>
-  </div>
-
-  <div class="section-block">
-    <img src="raggix.jpg" alt="Astronomia Raggi X">
-    <p><b>
-        <u><mark>Astronomia Raggi X</mark></u><br>
-        Esamina oggetti estremamente energetici come buchi neri, stelle di neutroni e ammassi di galassie.
-        I raggi X non raggiungono la superficie terrestre, quindi vengono osservati con telescopi in orbita come Chandra e XMM-Newton.
-    </b></p>
-  </div>
-
-  <div class="section-block">
-    <img src="raggigamma.jpg" alt="Astronomia Raggi Gamma">
-    <p><b>
-        <u><mark>Astronomia Raggi Gamma</mark></u><br>
-        È la più energetica tra tutte le bande. Studia lampi gamma, buchi neri in fusione, eventi cosmici estremi.
-        I telescopi Fermi e MAGIC rilevano queste emissioni dallo spazio o da alte quote terrestri.
-    </b></p>
-  </div>
-
-  <!-- Strumenti e tecnologie -->
-  <h2><mark><b>Strumenti e Tecnologie</b></mark></h2>
-
-  <p><b>
-    L’astronomia moderna utilizza strumenti avanzati per osservare il cielo in tutte le frequenze. Ecco i principali:
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">Telescopi Ottici</span></u><br>
-    A rifrazione e riflessione, amplificano la luce visibile. Installati in zone secche e buie, come il deserto di Atacama o le Hawaii.
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">Radiotelescopi</span></u><br>
-    Enormi parabole che captano onde radio. Operano in gruppo per formare interferometri e ottenere immagini dettagliate.
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">Spettroscopi</span></u><br>
-    Analizzano la luce in ogni lunghezza d’onda per determinare la composizione, temperatura e velocità degli oggetti celesti.
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">CCD</span></u><br>
-    Sensori elettronici che catturano immagini astronomiche digitali con alta sensibilità e basso rumore.
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">Osservatori Spaziali</span></u><br>
-    Telescopi in orbita come Hubble, James Webb, Chandra, Fermi. Rivelano bande di radiazione assorbite dall’atmosfera.
-  </b></p>
-
-  <p><b>
-    <u><span style="color:gold; font-style:italic;">Interferometri</span></u><br>
-    Combinano più antenne o telescopi per aumentare la risoluzione. Essenziali in radioastronomia e osservazioni millimetriche.
-  </b></p>
-
-  <!-- Pulsante di ritorno -->
+  <!-- ═══ BACK ═══ -->
   <div class="back-button">
     <a href="index.html">← Torna al Blog</a>
   </div>
-</div>
+
+  <footer>&copy; Blog di Arthur Veo &nbsp;✦&nbsp; Spazio1999</footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' ||
+          (e.ctrlKey && e.key === 'u') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+          (e.ctrlKey && e.shiftKey && e.key === 'J')) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+  </script>
+
 </body>
 </html>
