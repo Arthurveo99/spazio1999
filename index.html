@@ -121,42 +121,44 @@
     }
 
     /* ─── HERO ─── */
-    .page-hero {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 70px 24px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-      animation: fadeUp 0.8s ease both;
-    }
+.page-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;      /* centra tutti i testi dentro */
+  padding: 70px 24px 40px;
+  max-width: 900px;        /* larghezza massima del contenitore */
+  margin: 0 auto;          /* centra il contenitore orizzontalmente */
+  animation: fadeUp 0.8s ease both;
+}
 
-    .hero-eyebrow {
-      font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      margin-bottom: 14px;
-    }
+.hero-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 14px;
+  text-align: center;      /* centra il testo orizzontalmente */
+  width: 100%;             /* occupa tutta la larghezza del contenitore */
+}
 
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      color: var(--gold-light);
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      text-shadow: 0 0 50px rgba(212,175,55,0.2);
-      margin-bottom: 10px;
-    }
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--gold-light);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-shadow: 0 0 50px rgba(212,175,55,0.2);
+  margin-bottom: 10px;
+}
 
-    .divider {
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 16px auto 36px;
-    }
+.divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 16px auto 36px;
+}
 
     /* ─── DROPDOWN COSTELLAZIONI ─── */
     .dropdown-wrap {
