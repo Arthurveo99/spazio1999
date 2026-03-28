@@ -162,10 +162,17 @@
     }
 
     /* ─── DROPDOWN STAGIONI ─── */
+    .dropdowns-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
     .dropdown-wrapper {
       position: relative;
       display: inline-block;
-      animation: fadeUp 0.8s 0.3s ease both;
     }
 
     .dropbtn {
@@ -173,17 +180,18 @@
       border: 1px solid var(--border);
       color: var(--gold-light);
       font-family: 'Cinzel', serif;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 14px 32px;
+      padding: 14px 28px;
       cursor: pointer;
       border-radius: 4px;
       transition: border-color 0.2s, background 0.2s;
       display: flex;
       align-items: center;
       gap: 10px;
+      white-space: nowrap;
     }
 
     .dropbtn:hover {
@@ -295,9 +303,18 @@
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; flex-direction: column; }
-      .nav-links.show { display: flex; position: absolute; top: 60px; left: 0; right: 0; background: rgba(5,13,26,0.97); padding: 20px; gap: 16px; border-bottom: 1px solid var(--border); }
+      .nav-links.show {
+        display: flex;
+        position: absolute;
+        top: 60px; left: 0; right: 0;
+        background: rgba(5,13,26,0.97);
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
       .menu-toggle { display: block; }
       .content-card { padding: 28px 24px; }
+      .dropdowns-row { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -324,22 +341,30 @@
     <p class="hero-subtitle">Le figure immortali del cielo — miti, stelle e stagioni</p>
     <div class="divider"></div>
 
-    <div class="dropdown-wrapper">
-      <button class="dropbtn">✦ Emisfero Boreale ▾</button>
-      <div class="dropdown-content">
-        <a href="invernoboreale.html">Inverno</a>
-        <a href="primaveraboreale.html">Primavera</a>
-        <a href="estateboreale.html">Estate</a>
-        <a href="autunnoboreale.html">Autunno</a>
+    <div class="dropdowns-row">
+
+      <!-- Dropdown Boreale -->
+      <div class="dropdown-wrapper">
+        <button class="dropbtn">✦ Emisfero Boreale ▾</button>
+        <div class="dropdown-content">
+          <a href="invernoboreale.html">Inverno</a>
+          <a href="primaveraboreale.html">Primavera</a>
+          <a href="estateboreale.html">Estate</a>
+          <a href="autunnoboreale.html">Autunno</a>
         </div>
-      
-        <button class="dropbtn">✦ Emisfero Australe ▾</button>
-      <div class="dropdown-content">
-        <a href="invernoaustrale.html">Inverno</a>
-        <a href="primaveraaustrale.html">Primavera</a>
-        <a href="estateaustrale.html">Estate</a>
-        <a href="autunnoaustrale.html">Autunno</a>
       </div>
+
+      <!-- Dropdown Australe -->
+      <div class="dropdown-wrapper">
+        <button class="dropbtn">✦ Emisfero Australe ▾</button>
+        <div class="dropdown-content">
+          <a href="invernoaustrale.html">Inverno</a>
+          <a href="primaveraaustrale.html">Primavera</a>
+          <a href="estateaustrale.html">Estate</a>
+          <a href="autunnoaustrale.html">Autunno</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -360,7 +385,7 @@
         dall'<mark>Unione Astronomica Internazionale</mark>, che ha anche stabilito i confini celesti tra ciascuna di esse.
       </p>
       <p>
-        Le costellazioni visibili cambiano con le stagioni e in base alla latitudine. In questa sezione puoi esplorare le principali <mark>costellazioni boreali</mark>,
+        Le costellazioni visibili cambiano con le stagioni e in base alla latitudine. In questa sezione puoi esplorare le principali costellazioni <mark>boreali</mark> e <mark>australi</mark>,
         stagione per stagione.
       </p>
     </div>
